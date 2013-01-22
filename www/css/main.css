@@ -157,22 +157,22 @@ SUB {
 
 /* =Layout
 --------------------------------------- */
-.l-container {
-	width: 910px;
-	margin: 24px auto;
-	padding: 24px;
-	background: #FFF;
+.l-header {
+	background: #301633;
 	}
-	.l-header {
+	.l-header-inner {
 		position: relative;
-		padding: 50px 28% 36px 27%;
+		width: 628px;
+		margin: 0 auto;
+		padding: 13px 150px 13px 180px;
 		}
+.l-container {
+	width: 958px;
+	margin: 0 auto;
+	}
 	.l-content {
-		padding-bottom: 42px;
-		}
-	.l-footer {
-		position: relative;
-		padding: 0 0 90px 27%;
+		padding: 24px;
+		background: #FFF;
 		}
 .l-back-layer {
 	position: fixed;
@@ -237,7 +237,8 @@ SUB {
 --------------------------------------- */
 
 /* Clearfix */
-.l-wrapper:after {
+.l-wrapper:after,
+.b-main-menu:after {
 	content: ".";
 	display: block;
 	height: 0;
@@ -252,6 +253,56 @@ SUB {
 
 /* =Header and footer blocks
 --------------------------------------- */
+
+/* Logo */
+.b-logo {
+	position: absolute;
+	top: 12px;
+	left: 10px;
+	text-decoration: none;
+	}
+	.b-logo .image {
+		display: block;
+		}
+
+/* Main menu */
+.b-main-menu {
+	margin: 0 0 0 -12px;
+	font: normal 24px/26px 'Meta Pro Light', Arial, Helvetica, sans-serif;
+	}
+	.b-main-menu .item {
+		float: left;
+		margin-left: 12px;
+		}
+		.b-main-menu .link {
+			display: inline-block;
+			text-decoration: none;
+			border-bottom: 1px solid;
+			color: #FFF;
+			}
+		.b-main-menu .link:hover {
+			color: #FCD757
+			}
+		.b-main-menu .selected {
+			margin-bottom: -30px;
+			padding: 0 8px 30px 8px;
+			background: #FF538C url('../img/containers/main-menu-selected-bg.png') repeat-x;
+			border: none;
+			color: #140000;
+			}
+		.b-main-menu .selected:hover {
+			color: #140000;
+			}
+	.b-main-menu .item:before {
+		content: none;
+		display: none;
+		}
+
+/* Bread crumbs */
+.b-breadcrumbs {
+	height: 50px;
+	text-indent: -9999px;
+	}
 
 /* =Simple blocks
 --------------------------------------- */
