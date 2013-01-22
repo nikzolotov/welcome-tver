@@ -1,0 +1,606 @@
+﻿/* =Reset
+--------------------------------------- */
+HTML, BODY, DIV, SPAN, APPLET, OBJECT, IFRAME,
+H1, H2, H3, H4, H5, H6, P, BLOCKQUOTE, PRE,
+A, ABBR, ACRONYM, ADDRESS, BIG, CITE, CODE,
+DEL, DFN, EM, FONT, IMG, INS, KBD, Q, S, SAMP,
+SMALL, STRIKE, STRONG, SUB, SUP, TT, VAR,
+B, U, I, CENTER,
+DL, DT, DD, OL, UL, LI,
+FIELDSET, FORM, LABEL, LEGEND,
+TABLE, CAPTION, TBODY, TFOOT, THEAD, TR, TH, TD {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	border: 0;
+	background: transparent;
+	font-size: 100%;
+	}
+INPUT, TEXTAREA, SELECT {
+	font: 100% Arial, Helvetica, sans-serif;
+	}
+/* Firefox submit padding fix (invalid) */
+INPUT[type='submit']::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+	}
+TABLE {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+BLOCKQUOTE, Q {
+	quotes: none;
+	}
+
+
+/* =Custom fonts
+---------------------------------------- */
+@font-face {
+	font-family: 'Meta Pro Thin';
+	src: url('../fonts/metapro-thin.eot');
+	src: url('../fonts/metapro-thin.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/metapro-thin.woff') format('woff'),
+		 url('../fonts/metapro-thin.svg') format('truetype'),
+		 url('../fonts/metapro-thin.svg#MetaProThin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'Meta Pro Light';
+	src: url('../fonts/metapro-light.eot');
+	src: url('../fonts/metapro-light.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/metapro-light.woff') format('woff'),
+		 url('../fonts/metapro-light.svg') format('truetype'),
+		 url('../fonts/metapro-light.svg#MetaProLight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+/* =Elements
+--------------------------------------- */
+HTML,
+BODY {
+	height: 100%;
+	}
+BODY {
+	background: #3F3F3F;
+	font: normal 14px/21px Arial, Helvetica, sans-serif;
+	color: #222;
+	}
+A:link {
+	color: #4787BD;
+	}
+A:visited {
+	color: #7D337F;
+	}
+A:hover {
+	color: #0D4B7F;
+	}
+A:active {
+	text-decoration: none;
+	color: #0D4B7F;
+	}
+A IMG {
+	border: none;
+	}
+H1 {
+	margin: 0 0 24px 0;
+	font: normal 60px/50px 'Meta Pro Thin', Arial, Helvetica, sans-serif;
+	}
+H2 {
+	margin: 28px 0 18px 0;
+	font: normal 36px/36px 'Meta Pro Thin', Arial, Helvetica, sans-serif;
+	}
+H3 {
+	margin: 21px 0 12px 0;
+	font: normal 24px/28px 'Meta Pro Light', Arial, Helvetica, sans-serif;
+	}
+H4 {
+	margin: 21px 0 9px 0;
+	}
+P {
+	margin-bottom: 21px;
+	}
+UL {
+	margin: 0 0 21px 26px;
+	}
+	UL LI {
+		margin-bottom: 10.5px;
+		list-style: none;
+		}
+	UL LI:before {
+		content: "—";
+		display: inline-block;
+		width: 24px;
+		margin-left: -26px;
+		padding-left: 2px;
+		color: #777;
+		}
+	UL UL, UL OL, OL UL, OL OL {
+		margin-top: 10.5px;
+		}
+OL {
+	margin: 0 0 21px 26px;
+	}
+	OL LI {
+		margin-bottom: 10.5px;
+		}
+DL {
+	margin-bottom: 21px;
+	}
+	DT {
+		font-weight: bold;
+		}
+	DD {
+		margin-bottom: 21px;
+		}
+TABLE {
+	margin: 0 -15px 21px -15px;
+	}
+	TH, TD {
+		padding: 11px 15px 10px 15px;
+		vertical-align: middle;
+		border-bottom: 1px solid #FFF;
+		text-align: left;
+		}
+SUP, SUB {
+	position: relative;
+	vertical-align: middle;
+	font-size: .75em;
+	}
+SUP {
+	bottom: .5em;
+	}
+SUB {
+	top: .5em;
+	}
+
+/* =Layout
+--------------------------------------- */
+.l-container {
+	width: 910px;
+	margin: 24px auto;
+	padding: 24px;
+	background: #FFF;
+	}
+	.l-header {
+		position: relative;
+		padding: 50px 28% 36px 27%;
+		}
+	.l-content {
+		padding-bottom: 42px;
+		}
+	.l-footer {
+		position: relative;
+		padding: 0 0 90px 27%;
+		}
+.l-back-layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	}
+
+/* Columns */
+.l-column-174 {
+	float: left;
+	width: 174px;
+	}
+.l-column-320 {
+	float: left;
+	width: 320px;
+	}
+
+/* Modal overlay */
+.l-theater {
+	margin-right: 17px;
+	overflow: hidden;
+	}
+.l-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: auto;
+	background: #78766A;
+	background: rgba(0, 0, 0, .5);
+	}
+	.l-modal-outer {
+		display: table;
+		width: 100%;
+		height: 100%;
+		}
+		.l-modal-inner {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			}
+			.l-modal-container {
+				display: inline-block;
+				padding: 32px;
+				text-align: left;
+				}
+
+/* Holsters */
+.h-column-20 {
+	padding-right: 20px;
+	}
+
+/* =Clearfix and global
+--------------------------------------- */
+
+/* Clearfix */
+.l-wrapper:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+
+/* NOBR replacement */
+.g-nobr {
+	white-space: nowrap;
+	}
+
+/* =Header and footer blocks
+--------------------------------------- */
+
+/* =Simple blocks
+--------------------------------------- */
+
+/* Icons */
+.b-icon {
+	position: relative;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	vertical-align: bottom;
+	}
+	.b-icon B {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 588px;
+		height: 230px;
+		background: url("../img/icons.png") no-repeat;
+		text-indent: -9999px;
+		}
+/* 16 */
+.b-icon-small-close B {
+	left: -17px;
+	}
+
+/* Close modal button */
+.b-close-modal {
+	position: absolute;
+	top: -5px;
+	right: -34px;
+	}
+	.b-close-modal .b-icon-close {
+		position: relative;
+		display: block;
+		margin: 0;
+		}
+
+/* Loading */
+.b-loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: none;
+	margin: -14px 0 0 -14px;
+	padding: 6px;
+	opacity: .7;
+	background: #000;
+	color: #FFF;
+	
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-o-border-radius: 6px;
+	-ms-border-radius: 6px;
+	border-radius: 6px;
+	}
+	.b-loading .image {
+		display: block;
+		}
+
+/* Image scrolling dot */
+.b-dot {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	padding: 6px;
+	font-size: 0;
+	}
+.b-dot:link {
+	color: #B6B6B6;
+	}
+.b-dot:visited {
+	color: #B6B6B6;
+	}
+.b-dot:hover,
+.b-dot-selected:link,
+.b-dot-selected:visited {
+	color: #222;
+	}
+	.b-dot B {
+		display: block;
+		width: 8px;
+		height: 8px;
+		background: #B6B6B6;
+		
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+		}
+	.b-dot:hover B,
+	.b-dot-selected B {
+		background: #222;
+		}
+.b-dot-selected {
+	cursor: default;
+	}
+
+/* =Content blocks
+--------------------------------------- */
+
+/* First title in block */
+.b-first-title {
+	margin-top: 0;
+	}
+
+/* Dotted link */
+.b-dynamic-link {
+	border-bottom: 1px dotted;
+	text-decoration: none;
+	color: #FFF !important;
+	}
+.b-dynamic-link:hover {
+	color: #F3C778 !important;
+	}
+
+/* Simple text intro */
+.b-intro {
+	font-size: 16px;
+	line-height: 21px;
+	}
+
+/* Last text block (paragraph, list, table, definition list) has no bottom margin */
+.b-last-textblock {
+	margin-bottom: 0 !important;
+	}
+
+/* =Containers
+--------------------------------------- */
+
+/* Slideshow functionality */
+.b-slideshow  {
+	position: relative;
+	}
+	.b-slideshow .frame {
+		width: 530px;
+		margin: -1px -38px;
+		padding: 1px 38px;
+		overflow: hidden;
+		}
+		.b-slideshow .slides {
+			width: 9999px;
+			}
+			.b-slideshow .slide {
+				float: left;
+				width: 530px;
+				height: 410px;
+				margin-right: 58px;
+				overflow: hidden;
+				/* To do: hidden ставить скриптом */
+				}
+		.b-slideshow .b-icon-prev {
+			position: absolute;
+			top: 145px;
+			left: -82px;
+			}
+		.b-slideshow .b-icon-next {
+			position: absolute;
+			top: 145px;
+			right: -82px;
+			}
+		.b-slideshow .hidden {
+			display: none;
+			}
+		.b-slideshow .dots {
+			margin: 18px 0 -18px 0;
+			text-align: center;
+			}
+
+/* Modal window itself */
+.b-modal-window {
+	padding: 5px;
+	background: #3C3B35;
+	background: rgba(0, 0, 0, .5);
+	
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-o-border-radius: 12px;
+	-ms-border-radius: 12px;
+	border-radius: 12px;
+	}
+	.b-modal-window-inner {
+		position: relative;
+		max-width: 530px;
+		padding: 44px 38px;
+		
+		background: #FFF;
+		background: rgba(255, 255, 255, .89);
+		
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+		-o-border-radius: 7px;
+		-ms-border-radius: 7px;
+		border-radius: 7px;
+		}
+
+/* Hidden content for modal */
+.b-modal-content {
+	display: none;
+	}
+
+/* =Form elements
+--------------------------------------- */
+
+/* Label */
+.b-label {
+	display: block;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 14px;
+	}
+
+/* Label goes to input */
+.b-hint-label {
+    display: none;
+    }
+
+/* Simple text input */
+.b-input,
+.b-textarea {
+	margin: 0;
+	padding: 4px 6px;
+	}
+.b-textarea {
+	display: block;
+	}
+
+/* 100% width input with wrapper */
+.b-wide-input INPUT,
+.b-wide-input TEXTAREA {
+	width: 100%;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+/* Search input with custom design */
+.b-search-input {
+	width: 486px;
+	height: 23px;
+	margin: 0;
+	padding: 3px 7px 4px 7px;
+	border: none;
+	background: url('../img/inputs.png') no-repeat 0 0;
+	font-size: 16px;
+	}
+
+/* Destination search */
+.b-opaque-input {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	background: none;
+	}
+
+/* Hint state for inputs */
+.b-hint-state {
+	color: #676767;
+	}
+
+/* Submit overlay */
+.b-submit-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	border: none;
+	background: url('../img/0.gif');
+	text-indent: -9999px;
+	}
+
+/* Button */
+.b-button {
+	position: relative;
+	height: 30px;
+	margin-right: 5px;
+	background: url('../img/inputs.png') 0 -62px;
+	}
+	.b-button .b-submit-overlay {
+		padding-left: 5px;
+		cursor: pointer;
+		text-indent: 0;
+		font-size: 12px;
+		color: #FFF;
+		}
+	.b-button .corner {
+		position: absolute;
+		top: 0;
+		right: -5px;
+		width: 5px;
+		height: 30px;
+		background: url('../img/inputs.png') no-repeat -395px -62px;
+		}
+.b-button:active {
+	background-position: 0 -93px;
+	}
+	.b-button:active .b-submit-overlay {
+		color: #CCC;
+		}
+	.b-button:active .corner {
+		background-position: -395px -93px; 
+		}
+
+/* Square button */
+.b-square-button {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	padding: 1px;
+	background: url('../img/containers.png');
+	}
+
+/* Submit icon emulation */
+.b-iconed-submit {
+	position: relative;
+	display: inline-block;
+	}
+	.b-iconed-submit .b-submit-overlay {
+		cursor: pointer;
+		}
+.b-iconed-submit:hover {
+	opacity: .6;
+	}
+
+/* Form field */
+.b-field {
+	margin-bottom: 18px;
+	}
+
+/* Field tip */
+.b-tip {
+	display: block;
+	margin-top: 4px;
+	padding-left: 9px;
+	font-size: 12px;
+	line-height: 14px;
+	color: #C1C3C5;
+	}
+	.b-tip .link {
+		color: #C1C3C5;
+		}
+	.b-tip .link:hover {
+		color: #FFF;
+		}
+
+/* =Forms
+--------------------------------------- */
