@@ -198,13 +198,14 @@ SUB {
 	}
 
 /* Columns */
-.l-column-174 {
+.l-column-300 {
 	float: left;
-	width: 174px;
+	width: 280px;
 	}
-.l-column-320 {
-	float: left;
-	width: 320px;
+
+/* Column paddings */
+.l-intercolumn-44 {
+	padding-right: 44px;
 	}
 
 /* Modal overlay */
@@ -326,7 +327,7 @@ SUB {
 	position: absolute;
 	width: 16px;
 	height: 16px;
-	margin-left: -19px;
+	margin: 1px 0 0 -20px;
 	overflow: hidden;
 	}
 	.b-icon B {
@@ -334,7 +335,7 @@ SUB {
 		top: 0;
 		left: 0;
 		width: 148px;
-		height: 86px;
+		height: 103px;
 		background: url("../img/icons.png") no-repeat;
 		text-indent: -9999px;
 		}
@@ -344,12 +345,16 @@ SUB {
 	height: 36px;
 	margin: -6px 0 0 -40px;
 	}
+	.b-icon-money B {
+		top: -17px;
+		}
 .b-icon-wifi {
 	width: 36px;
 	height: 36px;
 	margin: -6px 0 0 -40px;
 	}
 	.b-icon-wifi B {
+		top: -17px;
 		left: -37px;
 		}
 .b-icon-treasure {
@@ -358,6 +363,7 @@ SUB {
 	margin: -6px 0 0 -40px;
 	}
 	.b-icon-treasure B {
+		top: -17px;
 		left: -74px;
 		}
 /* 48 */
@@ -367,7 +373,7 @@ SUB {
 	margin: -12px 0 0 -52px;
 	}
 	.b-icon-bicycle B {
-		top: -37px;
+		top: -54px;
 		}
 
 /* Close modal button */
@@ -409,25 +415,25 @@ SUB {
 	display: inline-block;
 	width: 8px;
 	height: 8px;
-	padding: 6px;
+	padding: 4px;
 	font-size: 0;
 	}
 .b-dot:link {
-	color: #B6B6B6;
+	color: #000;
 	}
 .b-dot:visited {
-	color: #B6B6B6;
+	color: #000;
 	}
 .b-dot:hover,
 .b-dot-selected:link,
 .b-dot-selected:visited {
-	color: #222;
+	color: #FFF;
 	}
 	.b-dot B {
 		display: block;
 		width: 8px;
 		height: 8px;
-		background: #B6B6B6;
+		background: #000;
 		
 		-moz-border-radius: 8px;
 		-webkit-border-radius: 8px;
@@ -435,7 +441,7 @@ SUB {
 		}
 	.b-dot:hover B,
 	.b-dot-selected B {
-		background: #222;
+		background: #FFF;
 		}
 .b-dot-selected {
 	cursor: default;
@@ -444,10 +450,16 @@ SUB {
 /* =Content blocks
 --------------------------------------- */
 
+/* Like H3 */
+.b-small-title {
+	margin: 21px 0 9px 0;
+	font: normal 24px/28px 'Meta Pro Light', Arial, Helvetica, sans-serif;
+	}
+
 /* Object title with shadow */
 .b-object-title {
 	display: inline-block;
-	margin: 0 0 12px -24px;
+	margin: 0 0 9px -24px;
 	background: url('../img/containers/object-title-shadow.png');
 	color: #FFF;
 	}
@@ -467,7 +479,7 @@ SUB {
 			.b-object-title .arrow {
 				display: inline-block;
 				margin-right: -25px;
-				padding: 3px 25px 16px 27px;
+				padding: 3px 25px 16px 30px;
 				background: url('../img/containers/object-title-arrow.png') no-repeat right 48%;
 				}
 
@@ -486,6 +498,18 @@ SUB {
 	color: #F3C778 !important;
 	}
 
+/* Place link */
+.b-place-link {
+	font-size: 16px;
+	color: #FFF!important;
+	}
+.b-place-link:hover {
+	color: #FCD757!important;
+	}
+	.b-place-link .b-icon {
+		margin-top: 2px;
+		}
+
 /* Simple text intro */
 .b-intro {
 	font-size: 16px;
@@ -497,10 +521,30 @@ SUB {
 	margin-bottom: 0 !important;
 	}
 
+/* Simple tag list */
+.b-tags {
+	margin: -8px 0 0 -8px;
+	font-size: 12px;
+	line-height: 14px;
+	}
+	.b-tags .item {
+		display: inline-block;
+		margin: 8px 0 0 8px;
+		}
+	.b-tags .item:before {
+		content: none;
+		display: none;
+		}
+		.b-tags .link {
+			color: #FFF;
+			}
+		.b-tags .link:hover {
+			color: #FCD757;
+			}
+
 /* Features with icons */
 .b-features {
 	margin: 0 0 0 -10px;
-	color: #FFF;
 	font-size: 11px;
 	line-height: 14px;
 	}
@@ -534,6 +578,17 @@ SUB {
 			top: -6px;
 			}
 
+/* Contacts */
+.b-contacts .title {
+	margin: 0 0 28px 0;
+	}
+.b-contacts .link {
+	color: #FFF;
+	}
+.b-contacts .link:hover {
+	color: #FCD757;
+	}
+
 /* =Containers
 --------------------------------------- */
 
@@ -566,19 +621,29 @@ SUB {
 		border-radius: 0 5px 0 0;
 		}
 
-/* Object header */
-.b-object-header {
+/* Green block */
+.b-green-block {
+	position: relative;
 	background: #8D8F00 url('../img/containers/object-header-bg.png') no-repeat right bottom;
+	color: #FFF;
 	}
-	.b-object-header .inner {
+	.b-green-block .inner {
 		padding: 16px 24px;
 		}
+	.b-green-block .links {
+		position: absolute;
+		bottom: 16px;
+		left: 24px;
+		}
 
-/* Object contacts */
-.b-object-contacts {
+/* Blue block */
+.b-blue-block {
 	background: #577DC7 url('../img/containers/object-contacts-bg.png') no-repeat right bottom;
+	color: #FFF;
 	}
-
+	.b-blue-block .inner {
+		padding: 16px 24px;
+		}
 
 /* Slideshow functionality */
 .b-slideshow  {
@@ -615,7 +680,10 @@ SUB {
 			display: none;
 			}
 		.b-slideshow .dots {
-			margin: 18px 0 -18px 0;
+			position: absolute;
+			bottom: 8px;
+			left: 0;
+			width: 100%;
 			text-align: center;
 			}
 
