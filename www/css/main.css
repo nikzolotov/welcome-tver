@@ -335,7 +335,7 @@ SUB {
 		top: 0;
 		left: 0;
 		width: 148px;
-		height: 103px;
+		height: 168px;
 		background: url("../img/icons.png") no-repeat;
 		text-indent: -9999px;
 		}
@@ -374,6 +374,17 @@ SUB {
 	}
 	.b-icon-bicycle B {
 		top: -54px;
+		}
+/* 64 */
+.b-icon-video {
+	width: 64px;
+	height: 64px;
+	top: 50%;
+	left: 50%;
+	margin: -32px 0 0 -32px;
+	}
+	.b-icon-video B {
+		top: -103px;
 		}
 
 /* Close modal button */
@@ -510,6 +521,32 @@ SUB {
 		margin-top: 2px;
 		}
 
+/* Map link */
+.b-map-link {
+	position: absolute;
+	bottom: 22px;
+	left: 18px;
+	font: normal 24px/24px 'Meta Pro Light', Arial, Helvetica, sans-serif;
+	}
+	.b-map-link .link {
+		padding-bottom: 3px;
+		background: #4787BD;
+		text-decoration: none;
+		color: #FFF;
+		}
+	.b-map-link .link:hover {
+		background: #FCD757;
+		color: #222;
+		}
+	.b-map-link .text {
+		position: relative;
+		}
+
+/* Video link */
+.b-video-link:hover .b-icon B {
+	left: -65px;
+	}
+
 /* Simple text intro */
 .b-intro {
 	font-size: 16px;
@@ -597,6 +634,7 @@ SUB {
 	margin: -29px -24px 24px -29px;
 	}
 	.b-tiles .tile {
+		position: relative;
 		float: left;
 		width: 316px;
 		height: 316px;
