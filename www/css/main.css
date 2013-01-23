@@ -198,14 +198,28 @@ SUB {
 	}
 
 /* Columns */
+.l-column-260 {
+	float: left;
+	width: 260px;
+	}
 .l-column-300 {
 	float: left;
 	width: 280px;
 	}
+.l-column-500 {
+	float: left;
+	width: 500px;
+	}
 
 /* Column paddings */
+.l-intercolumn-28 {
+	padding-right: 28px;
+	}
 .l-intercolumn-44 {
 	padding-right: 44px;
+	}
+.l-shift-116 {
+	padding-left: 116px;
 	}
 
 /* Modal overlay */
@@ -365,6 +379,15 @@ SUB {
 	.b-icon-treasure B {
 		top: -17px;
 		left: -74px;
+		}
+.b-icon-cafe {
+	width: 36px;
+	height: 36px;
+	margin: -6px 0 0 -40px;
+	}
+	.b-icon-cafe B {
+		top: -17px;
+		left: -111px;
 		}
 /* 48 */
 .b-icon-bicycle {
@@ -549,8 +572,7 @@ SUB {
 
 /* Simple text intro */
 .b-intro {
-	font-size: 16px;
-	line-height: 21px;
+	font: normal 24px/28px 'Meta Pro Light', Arial, Helvetica, sans-serif;
 	}
 
 /* Last text block (paragraph, list, table, definition list) has no bottom margin */
@@ -590,7 +612,7 @@ SUB {
 		display: inline-block;
 		max-width: 90px;
 		margin-left: 4px;
-		padding-left: 36px;
+		padding-left: 40px;
 		vertical-align: top;
 		}
 	.b-features .item:before {
@@ -606,7 +628,7 @@ SUB {
 			display: table-cell;
 			vertical-align: middle;
 			height: 36px;
-			padding-right: 6px;
+			padding-right: 14px;
 			}
 	.b-features .large-icon {
 		padding-left: 49px;
@@ -614,6 +636,12 @@ SUB {
 		.b-features .large-icon .b-icon {
 			top: -6px;
 			}
+.b-features-compact .item {
+	padding-left: 36px;
+	}
+	.b-features-compact .label {
+		padding-right: 6px;
+		}
 
 /* Contacts */
 .b-contacts .title {
@@ -625,6 +653,45 @@ SUB {
 .b-contacts .link:hover {
 	color: #FCD757;
 	}
+
+/* More content */
+.b-more .frame {
+	overflow: hidden;
+	}
+.b-more .fader {
+	position: relative;
+	display: block;
+	margin: -33px 0 0 -42px;
+	width: 568px;
+	height: 33px;
+	background: url('../img/containers/more.png') no-repeat;
+	}
+.b-more .link {
+	font-size: 16px;
+	color: #4787BD;
+	}
+.b-more .link:hover {
+	color: #0D4B7F;
+	}
+
+/* Event */
+.b-event {
+	margin: 30px -32px 0 -140px;
+	padding: 12px 24px 20px 140px;
+	background: #7BA5C3;
+	border-right: 60px solid #BDD2E1;
+	}
+	.b-event .title {
+		margin: 0 0 3px 0;
+		color: #FFF;
+		}
+	.b-event .date {
+		margin-bottom: 9px;
+		color: #FFF;
+		}
+	.b-event .desc {
+		margin: 0;
+		}
 
 /* =Containers
 --------------------------------------- */
