@@ -1,4 +1,3 @@
 syntax: glob
-design/*
 logs/*
 parser3.conf
