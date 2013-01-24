@@ -4,6 +4,8 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<title>Тверская область</title>
 		<link rel="stylesheet" type="text/css" href="/css/main.css" media="screen"/>
+		<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.masonry.min.js"></script>
 	</head>
 	<body>
 		<div class="l-header">
@@ -35,8 +37,8 @@
 				way points
 			</div>
 			<div class="l-content">
-				<div class="b-tiles">
-					<div class="tile tile-2 tile-top-left b-green-block">
+				<div id="tiles" class="b-tiles">
+					<div class="tile tile-2-1 tile-top-left b-green-block">
 						<div class="inner">
 							<img src="/img/tmp/likes.png" alt="" style="display: block; margin-bottom: 17px"/>
 							<h1 class="b-object-title">
@@ -119,8 +121,14 @@
 						</div>
 					</div>
 				</div>
+				<script type="text/javascript">
+					$('#tiles').masonry({
+						itemSelector: '.tile',
+						columnWidth: 321
+					});
+				</script>
 				<div class="l-wrapper">
-					<div class="l-column-492 l-shift-116">
+					<div class="l-column-492 l-shift-112">
 						<div class="l-with-context">
 							<p class="b-intro">Усадьба Василёво — архитектурно-художест&shy;венный ансамбль конца XVIII — начала XIX веков. Усадьба расположена на берегу реки Тверцы приблизительно в 3–4 км выше по течению реки севернее города Торжка. На базе усадьбы располагается музей деревянного зодчества.</p>
 							<div class="l-context">
@@ -202,7 +210,7 @@
 						<p>Имеются и другие уникальные экспонаты, например, старинные камни-валуны раннехристианской эпохи из села Пречистая Каменка Кувшиновского района Тверской области с изображением креста и отпечатком «стопы Богородицы», по преданиям являвшейся жителям этих мест в XI веке.</p>
 					</div>					
 				</div>
-				<div class="l-shift-116">
+				<div class="l-shift-112">
 					<h2>Ещё про усадьбу на сайте</h2>
 					<ul class="b-stories-links">
 						<li class="item">
@@ -237,7 +245,7 @@
 				</div>
 			</div>
 			<div class="l-content">
-				<div class="l-shift-116">
+				<div class="l-shift-112">
 					<h2 class="b-large-title b-first-title">Интересное рядом</h2>
 					<ul class="b-objects">
 						<li class="item">
