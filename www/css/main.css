@@ -173,7 +173,7 @@ SUB {
 	}
 	.l-content {
 		margin-bottom: 14px;
-		padding: 24px;
+		padding: 24px 24px 36px 24px;
 		background: #FFF;
 		
 		-moz-border-radius: 7px;
@@ -638,6 +638,30 @@ SUB {
 	left: -65px;
 	}
 
+/* Yellow link or text */
+.b-mark {
+	display: inline-block;
+	background: #FBBD00;
+	font: normal 20px/20px 'Meta Pro Light', Arial, Helvetica, sans-serif;
+	color: #000;
+	}
+	.b-mark .arrow {
+		display: inline-block;
+		margin-right: -25px;
+		padding: 5px 35px 8px 10px;
+		background: url('../img/containers/flag-text-arrow.png') no-repeat right 49%;
+		}
+.b-mark-link {
+	color: #000 !important;
+	}
+	.b-mark-link .text {
+		display: inline-block;
+		border-bottom: 1px solid;
+		}
+.b-mark-link:hover {
+	opacity: .8;
+	}
+
 /* Simple text intro */
 .b-intro {
 	font: normal 24px/28px 'Meta Pro Light', Arial, Helvetica, sans-serif;
@@ -671,6 +695,19 @@ SUB {
 	font-size: 12px;
 	line-height: 16px;
 	}
+
+/* Stories links */
+.b-stories-links {
+	margin: -14px 0 21px -18px;
+	}
+	.b-stories-links .item {
+		display: inline-block;
+		margin: 14px 0 0 18px;
+		}
+	.b-stories-links .item:before {
+		content: none;
+		display: none;
+		}
 
 /* Features with icons */
 .b-features {
