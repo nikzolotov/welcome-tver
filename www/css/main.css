@@ -213,6 +213,10 @@ SUB {
 	float: left;
 	width: 492px;
 	}
+.l-column-604 {
+	float: left;
+	width: 604px;
+	}
 
 /* Column paddings */
 .l-intercolumn-44 {
@@ -345,7 +349,7 @@ SUB {
 /* Bread crumbs */
 .b-breadcrumbs {
 	height: 50px;
-	text-indent: -9999px;
+	
 	}
 
 /* Copyright */
@@ -371,11 +375,20 @@ SUB {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 148px;
+		width: 255px;
 		height: 168px;
 		background: url("../img/icons.png") no-repeat;
 		text-indent: -9999px;
 		}
+/* 16 */
+.b-icon-snowflake {
+	width: 16px;
+	height: 19px;
+	margin: 4px 0 0 -22px;
+}
+	.b-icon-snowflake B {
+		left: -18px;
+	}
 /* 36 */
 .b-icon-money {
 	width: 36px;
@@ -411,6 +424,42 @@ SUB {
 	.b-icon-cafe B {
 		top: -17px;
 		left: -111px;
+		}
+.b-icon-people {
+	width: 36px;
+	height: 36px;
+	margin: -6px 0 0 -40px;
+	}
+	.b-icon-people B {
+		top: -17px;
+		left: -147px;
+		}
+.b-icon-people {
+	width: 36px;
+	height: 36px;
+	margin: -6px 0 0 -40px;
+	}
+	.b-icon-people B {
+		top: -17px;
+		left: -147px;
+		}
+.b-icon-pin-big {
+	width: 36px;
+	height: 36px;
+	margin: -6px 0 0 -40px;
+	}
+	.b-icon-pin-big B {
+		top: -17px;
+		left: -184px;
+		}
+.b-icon-pin-inverted {
+	width: 36px;
+	height: 36px;
+	margin: -6px 0 0 -40px;
+	}
+	.b-icon-pin-inverted B {
+		top: -17px;
+		left: -222px;
 		}
 /* 48 */
 .b-icon-bicycle {
@@ -587,6 +636,18 @@ SUB {
 				padding: 3px 25px 16px 30px;
 				background: url('../img/containers/object-title-arrow.png') no-repeat right 48%;
 				}
+			
+.b-object-title-image {
+	margin-top: 15px;
+}
+	.b-object-title-image .text .arrow {
+	 	padding-top: 4px;
+		padding-left: 71px;
+	}
+		.b-object-title-image .image {
+			position: absolute;
+			left: 12px;
+		}
 
 /* First title in block */
 .b-first-title {
@@ -789,6 +850,15 @@ SUB {
 	.b-features-compact .label {
 		padding-right: 6px;
 		}
+.b-features-expanded .item {
+	margin-right: 15px;
+}
+	.b-features-expanded .link {
+		color: #000;
+	}
+		.b-features-expanded .link:hover {
+			color: #5B5B5B;
+		}
 
 /* Contacts */
 .b-contacts .title {
@@ -871,7 +941,51 @@ SUB {
 		.b-objects-compact .b-image-frame {
 			margin-bottom: 2px;
 			}
+.b-objects-narrow {
+	margin-top: -20px;
+	margin-left: -22px;
+}	
+	.b-objects-narrow .item {
+		width: 130px;
+		margin-left: 26px;
+	}
 
+/* The simple list without styles */
+.b-unstiled {
+	margin: 0 0 15px 0;
+	}
+	.b-unstiled .item:before {
+		content: none;
+		display: none;
+		}
+	.b-unstiled .item {
+		margin-bottom: 5px;
+		}
+
+/* The list with icons */
+.b-themes-link {
+	margin-left: -12px;
+}
+	.b-themes-link .item:before {
+		content: none;
+		display: none;
+	}
+	.b-themes-link .item {
+		display: inline-block;
+		margin: 0 0 15px 35px;
+	}
+/* The thematic links */
+.b-thematic-link {
+	font: 18px/18px 'Meta Pro Light',Arial,Helvetica,sans-serif;
+	color: #577dc7 !important;
+}
+	 .b-thematic-link:hover {
+	 	color: #0D4B7F !important;
+	 }
+/* The link leads to map */
+.b-objects-map {
+	margin: -14px 0 2px;
+}
 /* =Containers
 --------------------------------------- */
 
@@ -930,6 +1044,21 @@ SUB {
 		padding: 16px 24px;
 		}
 	.b-green-block .links {
+		position: absolute;
+		bottom: 16px;
+		left: 24px;
+		}
+
+/* Yellow block */
+.b-yellow-block {
+	position: relative;
+	background: #FCBF0C url('../img/containers/object-district-bg.png') no-repeat right bottom;
+	color: #000;
+	}
+	.b-yellow-block .inner {
+		padding: 16px 24px;
+		}
+	.b-yellow-block .links {
 		position: absolute;
 		bottom: 16px;
 		left: 24px;
