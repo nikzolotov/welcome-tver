@@ -348,10 +348,87 @@ SUB {
 
 /* Bread crumbs */
 .b-breadcrumbs {
-	height: 50px;
-	
+	margin: 25px 0 21px;
+}
+	.b-breadcrumbs .item:before {
+		content: none;
+		display: none;
 	}
-
+	.b-breadcrumbs .item {
+		display: inline-block;
+		margin: 0 30px 0 0;
+		vertical-align: top;
+	}
+	.b-breadcrumbs .item-last .b-object-link .arrow {
+		background: none;
+	}
+/* Purple arrow */
+.b-object-link {
+	display: inline-block;
+	text-decoration: none;
+	font: 18px/18px 'Meta Pro Light',Arial,Helvetica,sans-serif;
+	color: #fff !important;
+}
+	.b-object-link .text {
+		display: inline-block;
+		background: #7903aa;
+	}
+		.b-object-link .arrow {
+			position: relative;
+			display: inline-block;
+			height: 18px;
+			margin-right: -25px;
+			padding: 9px 25px 16px 7px;
+			background: url('../img/containers/breadcrumbs-arrow.png') no-repeat right 50%;
+		}
+			.b-object-link .link {
+				position: relative;
+				padding-right: 19px;
+				text-decoration: underline;
+			}
+			.b-object-link .down-arrow {
+				position: absolute;
+				top: 10px;
+				right: 5px;
+				display: block;
+				width: 12px;
+				height: 11px;
+				background: url('../img/containers/arrow-down.png') no-repeat;
+			}
+			.b-breadcrumbs .item-last .b-object-link .link {
+				padding-right: 26px;
+			}
+			.b-breadcrumbs .item-last .b-object-link .down-arrow  {
+				right: 12px;
+			}
+/*Sub menu for bread crumbs*/
+.b-sub-menu {
+	position: absolute;
+	z-index: 9999;
+	display: none;
+	width: 190px;
+	background: #f7a51c;
+}
+	.b-sub-menu .menu {
+		margin: 0;
+	}
+		.b-sub-menu .menu .item {
+			display: block;
+			margin: 0;
+			padding-top: 1px;
+		}
+			.b-sub-menu .menu .item .link {
+				display: block;
+				padding: 4px 9px 6px;
+			}
+			.b-sub-menu .menu .item .link,
+			.b-sub-menu .menu .item .link:visited {
+				color: #000;
+			}
+			.b-sub-menu .menu .item .link:hover {
+				background: #7903AA;
+				color: #fff;
+			}
 /* Copyright */
 .b-copyright {
 	margin: 42px -24px 0 -24px;
@@ -375,7 +452,7 @@ SUB {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 255px;
+		width: 293px;
 		height: 168px;
 		background: url("../img/icons.png") no-repeat;
 		text-indent: -9999px;
@@ -460,6 +537,18 @@ SUB {
 	.b-icon-pin-inverted B {
 		top: -17px;
 		left: -222px;
+		}
+.b-icon-logo {
+	position: relative;
+	display: block;
+	width: 18px;
+	height: 21px;
+	margin: 2px 0 0;
+	overflow: hidden;
+	}
+	.b-icon-logo B {
+		top: -25px;
+		left: -269px;
 		}
 /* 48 */
 .b-icon-bicycle {
