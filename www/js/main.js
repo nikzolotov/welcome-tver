@@ -31,10 +31,12 @@ $(function(){
 	    	$(OPTIONS.items).hover(function(){
 	    		$(this)
 	    		.find(OPTIONS.sub_menu)
+	    		.stop(true, true)
 	    		.slideDown(OPTIONS.speed);
 	    	},function(){
 	    		$(this)
 	    		.find(OPTIONS.sub_menu)
+	    		.stop(true, true)
 	    		.slideUp(OPTIONS.speed);
 	    	})
 	    }
