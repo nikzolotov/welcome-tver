@@ -452,7 +452,7 @@ SUB {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 293px;
+		width: 370px;
 		height: 168px;
 		background: url("../img/icons.png") no-repeat;
 		text-indent: -9999px;
@@ -641,6 +641,38 @@ SUB {
 .b-dot-selected {
 	cursor: default;
 	}
+/* Image scrolling dot */
+.b-dots-gallery .b-dot {
+	width: 15px;
+	height: 15px;
+	padding: 3px;
+	}
+.b-dots-gallery .b-dot:link {
+	color: #5a5a5a;
+	}
+.b-dots-gallery .b-dot:visited {
+	color: #5a5a5a;
+	}
+.b-dots-gallery .b-dot:hover,
+.b-dots-gallery .b-dot-selected:link,
+.b-dots-gallery .b-dot-selected:visited {
+	color: #5a5a5a;
+	}
+	.b-dots-gallery .b-dot B {
+		width: 11px;
+		height: 11px;
+		border: 2px #000 solid;
+		background: #5a5a5a;
+		
+		-moz-border-radius: 11px;
+		-webkit-border-radius: 11px;
+		border-radius: 11px;
+		}
+	.b-dots-gallery .b-dot:hover B,
+	.b-dots-gallery .b-dot-selected B {
+		border: 2px #fff solid;
+		background: #a6a6a6;
+		}
 
 /* Images with logo shape */
 .b-image-frame {
@@ -812,6 +844,16 @@ SUB {
 	font-size: 24px;
 	line-height: 24px;
 	}
+.b-mark-title {
+	font: 48px/34px 'Meta Pro Thin',Arial,Helvetica,sans-serif
+	}
+	.b-mark-title .arrow {
+		padding-bottom: 18px;
+		padding-left: 20px;
+	}
+		.b-mark-title .text {
+			display: inline-block;
+		}
 .b-mark-link {
 	color: #000 !important;
 	}
@@ -1167,9 +1209,7 @@ SUB {
 	position: relative;
 	}
 	.b-slideshow .frame {
-		width: 530px;
-		margin: -1px -38px;
-		padding: 1px 38px;
+		width: 959px;
 		overflow: hidden;
 		}
 		.b-slideshow .slides {
@@ -1177,21 +1217,33 @@ SUB {
 			}
 			.b-slideshow .slide {
 				float: left;
-				width: 530px;
-				height: 410px;
-				margin-right: 58px;
+				width: 959px;
+				height: 629px;
 				overflow: hidden;
 				/* To do: hidden ставить скриптом */
 				}
 		.b-slideshow .b-icon-prev {
 			position: absolute;
-			top: 145px;
-			left: -82px;
+			top: 296px;
+			left: -37px;
+			width: 36px;
+			height: 36px;
+			margin: 0;
+			}
+			.b-slideshow .b-icon-prev B {
+				top: -17px;
+				left: -333px;
 			}
 		.b-slideshow .b-icon-next {
 			position: absolute;
-			top: 145px;
-			right: -82px;
+			top: 296px;
+			right: -37px;
+			width: 36px;
+			height: 36px;
+			}
+			.b-slideshow .b-icon-next B {
+				top: -17px;
+				left: -295px;
 			}
 		.b-slideshow .hidden {
 			display: none;
@@ -1203,6 +1255,39 @@ SUB {
 			width: 100%;
 			text-align: center;
 			}
+		.b-slideshow .b-dots-gallery {
+			position: relative;
+			bottom: 0;
+			padding: 4px 0 1px;
+		}
+
+/* The Design a gallery images */
+.b-gallery-image {
+	position: relative;
+}
+	.b-gallery-image .sign {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: rgba(0,0,0,0.5);
+		font: 18px/22px 'Meta Pro Light', Arial, Helvetica, sans-serif;
+
+		color: #fff;
+	}
+		.b-gallery-image .text {
+			padding: 15px 40% 15px 20px;
+		}
+
+/* The container for slideshow */
+.b-wrapper-slideshow {
+	position: relative;
+	margin: -33px -29px 24px -28px;
+	padding: 20px 0 0;
+	background-color: #000;
+
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
 
 /* Modal window itself */
 .b-modal-window {

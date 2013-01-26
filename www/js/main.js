@@ -1,5 +1,11 @@
 $(function(){
     $('.b-breadcrumbs').dropDownMenu();
+    $('#slideshow').slideShow({
+		slideFromKeyboard: true,
+		dots: true,
+		slideWidth: 959,
+		slideDistance: 0
+	}); 
 });
 
 
