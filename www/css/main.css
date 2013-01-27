@@ -375,7 +375,7 @@ SUB {
 	}
 		.b-object-link .arrow {
 			position: relative;
-			display: inline-block;
+			display: block;
 			height: 18px;
 			margin-right: -25px;
 			padding: 9px 25px 16px 7px;
@@ -383,13 +383,14 @@ SUB {
 		}
 			.b-object-link .link {
 				position: relative;
+				display: inline-block;
 				padding-right: 19px;
 				text-decoration: underline;
 			}
 			.b-object-link .down-arrow {
 				position: absolute;
-				top: 10px;
-				right: 5px;
+				top: 7px;
+				right: 0px;
 				display: block;
 				width: 12px;
 				height: 11px;
@@ -709,6 +710,19 @@ SUB {
 		height: 132px;
 		background-image: url('../img/containers/image-frame-132.png');
 		}
+.b-image-frame-55 {
+	width: 50px;
+	height: 55px;
+	}
+	.b-image-frame-55 .inner {
+		width: 75px;
+		margin-left: -16px;
+		}
+	.b-image-frame-55 .frame {
+		width: 50px;
+		height: 55px;
+		background-image: url('../img/containers/image-frame-55.png');
+		}
 
 /* =Content blocks
 --------------------------------------- */
@@ -845,11 +859,14 @@ SUB {
 	line-height: 24px;
 	}
 .b-mark-title {
+	position: relative;
+	left: -3px;
+	margin-bottom: 21px;
 	font: 48px/34px 'Meta Pro Thin',Arial,Helvetica,sans-serif
 	}
 	.b-mark-title .arrow {
 		padding-bottom: 18px;
-		padding-left: 20px;
+		padding-left: 23px;
 	}
 		.b-mark-title .text {
 			display: inline-block;
@@ -1041,6 +1058,14 @@ SUB {
 		margin: 0;
 		}
 
+/*  */
+.b-emphasized {
+	padding: 20px 20px 24px 28px;
+	margin: 0 -20px 21px -29px;
+	border-left: 1px solid #757572;
+	background: #e1e1db;
+}
+
 /* Objects list */
 .b-objects {
 	margin: -32px 0 32px -50px;
@@ -1072,6 +1097,15 @@ SUB {
 		.b-objects-compact .b-image-frame {
 			margin-bottom: 2px;
 			}
+.b-objects-more-compact {
+	margin-top: -1px;
+	margin-left: -9px;
+}
+	.b-objects-more-compact .item {
+		width: 80px;
+		margin-top: 18px;
+		margin-left: 9px;
+	}
 .b-objects-narrow {
 	margin-top: -20px;
 	margin-left: -22px;
@@ -1114,8 +1148,11 @@ SUB {
 	 	color: #0D4B7F !important;
 	 }
 /* The link leads to map */
-.b-objects-map {
-	margin: -14px 0 2px;
+.b-object-link {
+	margin: -14px 0 0;
+}
+.b-object-link-context {
+	margin: -10px 0 2px;
 }
 /* =Containers
 --------------------------------------- */
@@ -1222,6 +1259,10 @@ SUB {
 				overflow: hidden;
 				/* To do: hidden ставить скриптом */
 				}
+		.b-slideshow .b-icon-next:hover,
+		.b-slideshow .b-icon-prev:hover {
+			opacity: 0.8;
+		}
 		.b-slideshow .b-icon-prev {
 			position: absolute;
 			top: 296px;
