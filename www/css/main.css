@@ -205,7 +205,11 @@ SUB {
 	}
 
 /* Columns */
-.l-column-300 {
+.l-column-260 {
+	float: left;
+	width: 260px;
+	}
+.l-column-280 {
 	float: left;
 	width: 280px;
 	}
@@ -219,6 +223,9 @@ SUB {
 	}
 
 /* Column paddings */
+.l-intercolumn-34 {
+	padding-right: 34px;
+	}
 .l-intercolumn-44 {
 	padding-right: 44px;
 	}
