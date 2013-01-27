@@ -1015,6 +1015,53 @@ SUB {
 			color: #5B5B5B;
 		}
 
+/* Page contents */
+.b-contents {
+	width: 142px;
+	margin: 0;
+	background: #FFF;
+	font-size: 12px;
+	line-height: 14px;
+	
+	-moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+	-o-box-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+	-ms-box-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+	}
+	.b-contents .item {
+		margin: 0;
+		}
+	.b-contents .item:before {
+		content: none;
+		display: none;
+		}
+		.b-contents .link {
+			display: block;
+			color: #4787BD;
+			}
+		.b-contents .link:hover {
+			text-decoration: none;
+			background: #A5CEEA;
+			color: #FFF;
+			}
+			.b-contents .text {
+				display: block;
+				margin-right: -8px;
+				padding: 8px 22px 8px 14px;
+				}
+		.b-contents .selected {
+			text-decoration: none;
+			background: #577DC7;
+			color: #FFF;
+			}
+		.b-contents .selected:hover {
+			background: #577DC7;
+			}
+			.b-contents .selected .text {
+				background: url('../img/containers/object-title-arrow.png') no-repeat right 50%;
+				}
+
 /* Contacts */
 .b-contacts .title {
 	margin: 0 0 28px 0;
@@ -1367,6 +1414,13 @@ SUB {
 /* Hidden content for modal */
 .b-modal-content {
 	display: none;
+	}
+
+/* Page contents on top */
+.b-top-contents {
+	position: absolute;
+	top: 2px;
+	left: -174px;
 	}
 
 /* =Form elements
