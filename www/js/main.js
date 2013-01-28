@@ -1,11 +1,19 @@
 $(function(){
     $('.b-breadcrumbs .item').dropDownMenu();
+
+    var slide_width = 959;
+    if($('.l-container').hasClass('l-container-960')) slide_width = 960;
     $('#slideshow').slideShow({
 		slideFromKeyboard: true,
 		dots: true,
-		slideWidth: 959,
+		slideWidth: slide_width,
 		slideDistance: 0
 	});
+
+    var tiles_height = $('.b-tiles').height();
+    if(tiles_height) $('.b-slideshow .slide').height(tiles_height-5);
+
+
 	$('.b-more').moreHistory();
 });
 
@@ -17,7 +25,7 @@ $(function(){
 
 	$.fn.moreHistory = function(userOptions) {
 		var OPTIONS = {
-			height: 154,
+			min_height: 154,
             toggle: '.frame',
             link_activation: '.link'
         };
@@ -43,7 +51,7 @@ $(function(){
 		    		event.preventDefault();
 		    	},function(event){
 		    		frame.animate({
-		    			height: OPTIONS.height + 'px'
+		    			height: OPTIONS.min_height + 'px'
 		    		},150);
 
 		    		event.preventDefault();

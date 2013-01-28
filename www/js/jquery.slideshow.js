@@ -2,6 +2,7 @@
 	$.fn.slideShow = function( userSettings ){
 		var SETTINGS = {
 			slidesContainerSelector: '.slides',
+			frameContainer: '.frame',
 			slideSelector: '.slide',
 			prevLinkSelector: '.b-icon-prev',
 			nextLinkSelector: '.b-icon-next',
@@ -11,6 +12,7 @@
 			dotSelector: '.b-dot',
 			dotSample: '<a class="b-dot" href="?"><b></b></a>',
 			dotSelectedClass: 'b-dot-selected',
+			slideShowObject: 'b-slideshow-objects',
 			slideBy: 1,
 			slidePerPage: 1,
 			slideWidth: 550,
@@ -30,9 +32,12 @@
 				slides = $(SETTINGS.slideSelector, container),
 				prevLink = $(SETTINGS.prevLinkSelector, container),
 				nextLink = $(SETTINGS.nextLinkSelector, container),
+				frameContainer = $(SETTINGS.frameContainer, container),
 				slidesCount = slides.length,
 				currentPage = 0;
-			
+				
+			container.add(slides).width(SETTINGS.slideWidth);
+
 			if( SETTINGS.dots && slidesCount > 1 ){
 				var dots,
 					dotsContainer = $(SETTINGS.dotsContainerSelector, container);
@@ -42,6 +47,22 @@
 			
 			manageLinks();
 			assignEvents();
+			sizeFrame();
+
+			function sizeFrame() {
+				
+				if(container.hasClass(SETTINGS.slideShowObject)){
+					if(currentPage == 0) {
+						frameContainer.width(SETTINGS.slideWidth+7).css('margin-left','-7px');
+						return 0;
+					}
+					else {
+						frameContainer.width(SETTINGS.slideWidth).css('margin-left','0');
+						return 7;
+					}
+				}
+				else return 0;
+			}
 			
 			function prepareDots(){
 				var dotsHtml = '';
@@ -121,8 +142,9 @@
 			}
 			
 			function switchSlide(){
+				var shift = sizeFrame();
 				slidesContainer.animate({
-					marginLeft: currentPage * (SETTINGS.slideWidth + SETTINGS.slideDistance) * SETTINGS.slideBy * -1
+					marginLeft: (currentPage * (SETTINGS.slideWidth + SETTINGS.slideDistance) * SETTINGS.slideBy * -1) - shift
 				}, SETTINGS.animationTime);
 				
 				manageLinks();

@@ -293,7 +293,8 @@ SUB {
 /* Clearfix */
 .l-wrapper:after,
 .b-main-menu:after,
-.b-tiles:after {
+.b-tiles:after,
+.b-slideshow .slides:after {
 	content: ".";
 	display: block;
 	height: 0;
@@ -355,7 +356,7 @@ SUB {
 
 /* Bread crumbs */
 .b-breadcrumbs {
-	margin: 25px 0 21px;
+	margin: 25px 0 17px;
 }
 	.b-breadcrumbs .item:before {
 		content: none;
@@ -364,7 +365,7 @@ SUB {
 	.b-breadcrumbs .item {
 		display: inline-block;
 		margin: 0 30px 0 0;
-		vertical-align: top;
+		vertical-align: bottom;
 	}
 	.b-breadcrumbs .item-last .b-object-link .arrow {
 		background: none;
@@ -407,7 +408,7 @@ SUB {
 				padding-right: 26px;
 			}
 			.b-breadcrumbs .item-last .b-object-link .down-arrow  {
-				right: 12px;
+				right: 8px;
 			}
 /*Sub menu for bread crumbs*/
 .b-sub-menu {
@@ -1072,6 +1073,17 @@ SUB {
 .b-contacts .link:hover {
 	color: #FCD757;
 	}
+.b-contacts-compact .title {
+	font-size: 24px !important;
+	line-height: 24px !important;
+	margin-bottom: 17px !important;
+}
+.b-contacts-compact .address,
+.b-contacts-compact .contact {
+	font-size: 12px;
+	line-height: 14px;
+	margin-bottom: 13px !important;
+}
 
 /* More content */
 .b-more .frame {
@@ -1193,6 +1205,7 @@ SUB {
 		display: inline-block;
 		margin: 0 0 15px 35px;
 	}
+
 /* The thematic links */
 .b-thematic-link {
 	font: 18px/18px 'Meta Pro Light',Arial,Helvetica,sans-serif;
@@ -1201,6 +1214,7 @@ SUB {
 	 .b-thematic-link:hover {
 	 	color: #0D4B7F !important;
 	 }
+
 /* The link leads to map */
 .b-object-link {
 	margin: -14px 0 0;
@@ -1208,6 +1222,12 @@ SUB {
 .b-object-link-context {
 	margin: -10px 0 2px;
 }
+
+/* The collages in a history */
+.b-collage {
+	margin-bottom: 21px;
+}
+
 /* =Containers
 --------------------------------------- */
 
@@ -1224,20 +1244,24 @@ SUB {
 		width: 637px;
 		height: 316px;
 		}
+	.b-tiles .tile-3-1 {
+		width: 958px;
+		height: 316px;
+		}
 	.b-tiles .tile-top-left {
-		-moz-border-radius: 5px 0 0 0;
-		-webkit-border-radius: 5px 0 0 0;
-		-o-border-radius: 5px 0 0 0;
-		-ms-border-radius: 5px 0 0 0;
-		border-radius: 5px 0 0 0;
+		-moz-border-top-left-radius: 5px;
+		-webkit-border-top-left-radius: 5px;
+		-o-border-top-left-radius: 5px;
+		-ms-border-top-left-radius: 5px;
+		border-top-left-radius: 5px;
 		}
 	.b-tiles .tile-top-right,
 	.b-tiles .tile-top-right .image {
-		-moz-border-radius: 0 5px 0 0;
-		-webkit-border-radius: 0 5px 0 0;
-		-o-border-radius: 0 5px 0 0;
-		-ms-border-radius: 0 5px 0 0;
-		border-radius: 0 5px 0 0;
+		-moz-border-top-right-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		-o-border-top-right-radius: 5px;
+		-ms-border-top-right-radius: 5px;
+		border-top-right-radius: 5px;
 		}
 .b-tiles-15 .tile {
 	width: 188px;
@@ -1251,10 +1275,23 @@ SUB {
 	width: 381px;
 	height: 188px;
 	}
+.b-tiles-15 .tile-3-1 {
+	width: 574px;
+	height: 188px;
+	}
 .b-tiles-15 .b-marked-link .b-mark-24 {
 	bottom: 16px;
 	left: 16px;
 	}
+.b-tiles-15 .b-contacts .title {
+	font-size: 30px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+.b-tiles-15 .b-contacts .address,
+.b-tiles-15 .b-contacts .contact {
+	margin-bottom: 14px;
+}
 
 /* Green block */
 .b-green-block {
@@ -1308,10 +1345,12 @@ SUB {
 			}
 			.b-slideshow .slide {
 				float: left;
-				width: 959px;
 				height: 629px;
 				overflow: hidden;
 				/* To do: hidden ставить скриптом */
+				}
+				.b-slideshow .slide .image {
+					max-height: 629px;
 				}
 		.b-slideshow .b-icon-next:hover,
 		.b-slideshow .b-icon-prev:hover {
@@ -1355,6 +1394,46 @@ SUB {
 			bottom: 0;
 			padding: 4px 0 1px;
 		}
+.b-slideshow-objects {
+	margin: -28px 0 24px -28px;
+}
+	.b-slideshow-objects .b-tiles {
+		width: 963px;
+		margin: -5px 0 0 2px;
+	}
+	.b-slideshow-objects .frame {
+		margin-left: -7px;
+
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.l-container-960 .b-slideshow-objects .b-tiles {
+		width: 965px;
+	}
+	.l-container .b-slideshow-objects .slide-title {
+		width: 966px !important;
+	}
+	.l-container-960 .b-slideshow-objects .slide-title {
+		width: 967px !important;
+	}
+	.l-container-960 .b-slideshow-objects .frame-inner {
+	}
+	.b-slideshow-objects .b-dots-gallery .b-dot {
+		width: 11px;
+		height: 11px;
+	}
+		.b-slideshow-objects .b-dots-gallery .b-dot B {
+			border: none;
+		}
+		.b-slideshow-objects .b-dots-gallery .b-dot:hover B,
+		.b-slideshow-objects .b-dots-gallery .b-dot-selected B {
+			border: none;
+		}
+		.b-slideshow .b-icon-next,
+		.b-slideshow .b-icon-prev {
+			top: 50%;
+			margin-top: -28px;
+		}
 
 /* The Design a gallery images */
 .b-gallery-image {
@@ -1368,6 +1447,10 @@ SUB {
 		font: 18px/22px 'Meta Pro Light', Arial, Helvetica, sans-serif;
 
 		color: #fff;
+	}
+	.b-gallery-image .image {
+		display: block;
+		margin: 0 auto;
 	}
 		.b-gallery-image .text {
 			padding: 15px 40% 15px 20px;
@@ -1416,12 +1499,14 @@ SUB {
 	display: none;
 	}
 
+
 /* Page contents on top */
 .b-top-contents {
 	position: absolute;
 	top: 2px;
 	left: -174px;
 	}
+
 
 /* =Form elements
 --------------------------------------- */
