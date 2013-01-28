@@ -8,6 +8,7 @@
 			nextLinkSelector: '.b-icon-next',
 			prevLinkDisabledClass: 'hidden',
 			nextLinkDisabledClass: 'hidden',
+			linkOnGallery: '.b-link-on-gallery',
 			dotsContainerSelector: '.dots',
 			dotSelector: '.b-dot',
 			dotSample: '<a class="b-dot" href="?"><b></b></a>',
@@ -33,6 +34,7 @@
 				prevLink = $(SETTINGS.prevLinkSelector, container),
 				nextLink = $(SETTINGS.nextLinkSelector, container),
 				frameContainer = $(SETTINGS.frameContainer, container),
+				linkOnGallery = $(SETTINGS.linkOnGallery),
 				slidesCount = slides.length,
 				currentPage = 0;
 				
@@ -49,19 +51,20 @@
 			assignEvents();
 			sizeFrame();
 
-			function sizeFrame() {
-				
+			function shiftFrame() {
 				if(container.hasClass(SETTINGS.slideShowObject)){
-					if(currentPage == 0) {
-						frameContainer.width(SETTINGS.slideWidth+7).css('margin-left','-7px');
-						return 0;
-					}
-					else {
-						frameContainer.width(SETTINGS.slideWidth).css('margin-left','0');
-						return 7;
-					}
+
+					if(currentPage == 0) return 0;
+					else return 7;
 				}
-				else return 0;
+				else return -1;
+			}
+
+			function sizeFrame() {
+				if(container.hasClass(SETTINGS.slideShowObject)){
+					if(currentPage == 0) frameContainer.width(SETTINGS.slideWidth+7).css('margin-left','-7px');
+					else frameContainer.width(SETTINGS.slideWidth).css('margin-left','0');
+				}
 			}
 			
 			function prepareDots(){
@@ -130,22 +133,38 @@
 				if( SETTINGS.dots && slidesCount > 1 ){
 					dots.click(function(event){
 						var thisIndex = $(this).index();
+						changeSlide(thisIndex)
 						
-						if( thisIndex != currentPage ){
-							currentPage = thisIndex;
-							switchSlide();
-						}
+						event.preventDefault();
+					});
+					linkOnGallery.click(function(event){
+						changeSlide(1)
 						
 						event.preventDefault();
 					});
 				}
 			}
+
+			function changeSlide(index){
+				if( index != currentPage ){
+					currentPage = index;
+					switchSlide();
+				}
+			}
 			
 			function switchSlide(){
-				var shift = sizeFrame();
+				var shift = shiftFrame();
+				if(shift == 7) frameContainer.width(SETTINGS.slideWidth).css('marginLeft','0');
+
 				slidesContainer.animate({
-					marginLeft: (currentPage * (SETTINGS.slideWidth + SETTINGS.slideDistance) * SETTINGS.slideBy * -1) - shift
-				}, SETTINGS.animationTime);
+					marginLeft: (currentPage * (SETTINGS.slideWidth + SETTINGS.slideDistance) * SETTINGS.slideBy * -1)
+				}, SETTINGS.animationTime, function(){
+					var marginLeft = parseInt($(this).css('marginLeft'));
+					if(shift == 0) frameContainer.width(SETTINGS.slideWidth+7).css('marginLeft','-7px');
+					if(shift == -1) shift = 0;
+					
+					$(this).css('marginLeft', marginLeft-shift);
+				});
 				
 				manageLinks();
 			}
