@@ -15,6 +15,13 @@ $(function(){
 
 
 	$('.b-more').moreHistory();
+
+
+	$(".b-contents .item .link").click(function(){
+		var selected = $(this).attr('href');	
+		$.scrollTo(selected, 500, {offset:-20 });		
+		return false;
+	});	
 });
 
 
@@ -45,7 +52,7 @@ $(function(){
 
 		    function toggleFrame(){
 		    	link.toggle(function(event){
-		    		height_auto = frame.removeAttr('style').height();
+		    		height_auto = frame.removeAttr('style').height() - 10;
 		    		frame.attr('style','height: 154px').stop().animate({
 		    			height: height_auto
 		    		},150, function(){
