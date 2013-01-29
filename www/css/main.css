@@ -356,7 +356,7 @@ SUB {
 
 /* Bread crumbs */
 .b-breadcrumbs {
-	margin: 25px 0 17px;
+	margin: 15px 0 17px;
 }
 	.b-breadcrumbs .item:before {
 		content: none;
@@ -365,10 +365,13 @@ SUB {
 	.b-breadcrumbs .item {
 		display: inline-block;
 		margin: 0 30px 0 0;
-		vertical-align: bottom;
+		vertical-align: top;
 	}
 	.b-breadcrumbs .item-last .b-object-link .arrow {
 		background: none;
+	}
+	.b-breadcrumbs .b-object-link {
+		margin: 0 !important;
 	}
 /* Purple arrow */
 .b-object-link {
@@ -1503,9 +1506,13 @@ SUB {
 /* Page contents on top */
 .b-top-contents {
 	position: absolute;
-	top: 2px;
-	left: -174px;
+	z-index: 9999;
+	margin-left: -174px;
 	}
+.b-fixed-top-contents {
+	position: fixed;
+	top: 28px;
+}
 
 
 /* =Form elements

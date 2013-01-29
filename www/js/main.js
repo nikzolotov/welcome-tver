@@ -22,6 +22,11 @@ $(function(){
 		$.scrollTo(selected, 500, {offset:-20 });		
 		return false;
 	});	
+
+	
+	$('.b-top-contents').scrollingСontents();
+
+
 });
 
 
@@ -29,6 +34,30 @@ $(function(){
 
 
 (function( $ ){
+
+	$.fn.scrollingСontents = function(userOptions) {
+		var OPTIONS = {
+            top: 20
+        };
+        var contents = $(this);
+
+        function scrilling(){
+        	var coordinates = contents.offset(),
+        		scroll_top = Math.round(coordinates.top);
+        	$(window).scroll(function(){
+        		var scrolled = $(window).scrollTop();
+        		toggleFixed(scroll_top-20, scrolled);
+        	})
+        }
+
+        function toggleFixed(scroll_top, scrolled){
+        	if(scroll_top <= scrolled) contents.addClass('b-fixed-top-contents');
+        	else contents.removeClass('b-fixed-top-contents');
+        }
+
+        return scrilling();
+
+	};
 
 	$.fn.moreHistory = function(userOptions) {
 		var OPTIONS = {
@@ -115,3 +144,4 @@ $(function(){
 
 
 })( jQuery );
+
