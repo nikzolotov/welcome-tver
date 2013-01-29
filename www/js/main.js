@@ -27,6 +27,7 @@ $(function(){
 		var OPTIONS = {
 			min_height: 154,
             toggle: '.frame',
+            fader: '.fader',
             link_activation: '.link'
         };
 
@@ -37,7 +38,8 @@ $(function(){
 		    }
 		    var container = $(this),
 		    	link = $(OPTIONS.link_activation, container),
-		    	frame = $(OPTIONS.toggle, container);
+		    	frame = $(OPTIONS.toggle, container),
+		    	fader = $(OPTIONS.fader, container);
 
 		    toggleFrame();
 
@@ -46,7 +48,9 @@ $(function(){
 		    		height_auto = frame.removeAttr('style').height();
 		    		frame.attr('style','height: 154px').stop().animate({
 		    			height: height_auto
-		    		},150);
+		    		},150, function(){
+		    			toggleShow('hidden')
+		    		});
 
 		    		event.preventDefault();
 		    	},function(event){
@@ -54,8 +58,21 @@ $(function(){
 		    			height: OPTIONS.min_height + 'px'
 		    		},150);
 
+		    		toggleShow('show');
+
 		    		event.preventDefault();
 		    	});
+	    	}
+
+	    	function toggleShow(parametr){
+	    		if(parametr == 'hidden') {
+	    			fader.hide();
+	    			link.text('Скрыть')
+	    		}
+	    		else {
+					fader.show();
+					link.text('Продолжение истории')
+	    		}
 	    	}
 
 	    });
