@@ -14,6 +14,7 @@
 			dotSample: '<a class="b-dot" href="?"><b></b></a>',
 			dotSelectedClass: 'b-dot-selected',
 			slideShowObject: 'b-slideshow-objects',
+			firstSlideGallery: '.b-gallery-image:first',
 			slideBy: 1,
 			slidePerPage: 1,
 			slideWidth: 550,
@@ -35,6 +36,7 @@
 				nextLink = $(SETTINGS.nextLinkSelector, container),
 				frameContainer = $(SETTINGS.frameContainer, container),
 				linkOnGallery = $(SETTINGS.linkOnGallery),
+				firstSlideGallery = $(SETTINGS.firstSlideGallery, container)
 				slidesCount = slides.length,
 				currentPage = 0;
 				
@@ -50,6 +52,7 @@
 			manageLinks();
 			assignEvents();
 			sizeFrame();
+
 
 			function shiftFrame() {
 				if(container.hasClass(SETTINGS.slideShowObject)){
@@ -138,7 +141,7 @@
 						event.preventDefault();
 					});
 					linkOnGallery.click(function(event){
-						changeSlide(1)
+						changeSlide(firstSlideGallery.index(SETTINGS.slideSelector, container))
 						
 						event.preventDefault();
 					});
