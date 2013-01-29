@@ -43,10 +43,12 @@ $(function(){
 
         function scrilling(){
         	var coordinates = contents.offset(),
-        		scroll_top = Math.round(coordinates.top);
+        		scroll_top = Math.round(coordinates.top),
+        		scrolled = $(window).scrollTop();
+        	toggleFixed(scroll_top, scrolled);
         	$(window).scroll(function(){
-        		var scrolled = $(window).scrollTop();
-        		toggleFixed(scroll_top-20, scrolled);
+        		scrolled = $(window).scrollTop()
+        		toggleFixed(scroll_top-23, scrolled);
         	})
         }
 
