@@ -39,26 +39,27 @@ $(function(){
 		var OPTIONS = {
             top: 20
         };
-        var contents = $(this);
-
-        function scrilling(){
-        	var coordinates = contents.offset(),
+        return this.each(function(){
+        	var contents = $(this),
+        		coordinates = contents.offset(),
         		scroll_top = Math.round(coordinates.top),
         		scrolled = $(window).scrollTop();
-        	toggleFixed(scroll_top, scrolled);
-        	$(window).scroll(function(){
-        		scrolled = $(window).scrollTop()
-        		toggleFixed(scroll_top-23, scrolled);
-        	})
-        }
+        		
+        	scrilling();
 
-        function toggleFixed(scroll_top, scrolled){
-        	if(scroll_top <= scrolled) contents.addClass('b-fixed-top-contents');
-        	else contents.removeClass('b-fixed-top-contents');
-        }
+        	function scrilling(){
+	        	toggleFixed(scroll_top, scrolled);
+	        	$(window).scroll(function(){
+	        		scrolled = $(window).scrollTop()
+	        		toggleFixed(scroll_top-23, scrolled);
+	        	});
+	        }
 
-        return scrilling();
-
+	        function toggleFixed(scroll_top, scrolled){
+	        	if(scroll_top <= scrolled) contents.addClass('b-fixed-top-contents');
+	        	else contents.removeClass('b-fixed-top-contents');
+	        }
+        });
 	};
 
 	$.fn.moreHistory = function(userOptions) {

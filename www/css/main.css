@@ -188,6 +188,9 @@ SUB {
 		-ms-box-shadow: 0 0 14px rgba(0, 0, 0, 0.75);
 		box-shadow: 0 0 14px rgba(0, 0, 0, 0.75);
 		}
+	.l-content-place {
+		margin-bottom: 28px;
+	}
 	.l-footer {
 		padding: 34px 28px 62px 28px;
 		}
@@ -217,10 +220,19 @@ SUB {
 	float: left;
 	width: 492px;
 	}
+.l-column-590 {
+	float: left;
+	width: 590px;
+}
+.l-column-290 {
+	float: right;
+	width: 290px;
+}
 .l-column-604 {
 	float: left;
 	width: 604px;
 	}
+
 
 /* Column paddings */
 .l-intercolumn-34 {
@@ -473,7 +485,7 @@ SUB {
 .b-icon-snowflake {
 	width: 16px;
 	height: 19px;
-	margin: 4px 0 0 -22px;
+	margin: 3px 0 0 -22px;
 }
 	.b-icon-snowflake B {
 		left: -18px;
@@ -734,6 +746,19 @@ SUB {
 		height: 55px;
 		background-image: url('../img/containers/image-frame-55.png');
 		}
+.b-image-frame-89 {
+	width: 76px;
+	height: 89px;
+}
+	.b-image-frame-89 .inner {
+		width: 87px;
+		margin-left: -5px;
+		}
+	.b-image-frame-89 .frame {
+		width: 76px;
+		height: 89px;
+		background-image: url('../img/containers/image-frame-89.png');
+		}
 
 /* =Content blocks
 --------------------------------------- */
@@ -762,6 +787,11 @@ SUB {
 	margin: 0 0 9px -24px;
 	background: url('../img/containers/object-title-shadow.png');
 	color: #FFF;
+	}
+	.b-object-title .link,
+	.b-object-title .link:visited,
+	.b-object-title .link:hover {
+		color: #fff;
 	}
 	.b-object-title .shadow-arrow {
 		display: inline-block;
@@ -871,7 +901,7 @@ SUB {
 	}
 .b-mark-title {
 	position: relative;
-	left: -3px;
+	left: -8px;
 	margin-bottom: 21px;
 	font: 48px/34px 'Meta Pro Thin',Arial,Helvetica,sans-serif
 	}
@@ -1183,7 +1213,13 @@ SUB {
 		width: 130px;
 		margin-left: 26px;
 	}
-
+.b-objects-place {
+	margin: -24px 0 0 -20px;
+}
+	.b-objects-place .item {
+		width: 120px;
+		margin-left: 20px;
+	}
 /* The simple list without styles */
 .b-unstiled {
 	margin: 0 0 15px 0;
@@ -1230,6 +1266,30 @@ SUB {
 .b-collage {
 	margin-bottom: 21px;
 }
+
+/* The block wiht mini map for places */
+.b-map-place {
+	position: relative;
+	text-align: right;
+}
+	.b-map-place .link-coatofarms {
+		position: absolute;
+		top: 7px;
+		left: 46px;
+		display: block;
+		text-decoration: none;
+	}
+	.b-map-place .image-map {
+		display: block;
+		text-align: right;
+	}
+	.b-map-place .link {
+		position: relative;
+		bottom: 8px;
+		margin-right: 22px;
+		font-size: 12px;
+		line-height: 12px;
+	}
 
 /* =Containers
 --------------------------------------- */
@@ -1310,6 +1370,35 @@ SUB {
 		bottom: 16px;
 		left: 24px;
 		}
+
+/* Light yellow block for list districts. The First element. */
+.b-lightyellow-block {
+	margin: -28px -28px 24px;
+	background: #eaefcb;
+
+	-o-border-top-left-radius: 5px;
+	-o-border-top-right-radius: 5px;
+	-ms-border-top-left-radius: 5px;
+	-ms-border-top-right-radius: 5px;
+	-moz-border-top-left-radius: 5px;
+	-moz-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+	.b-lightyellow-block .inner {
+		padding: 26px 25px 6px 24px; 
+	}
+	.b-lightyellow-block .b-object-title {
+		margin-bottom: 20px;
+	}
+	.b-lightyellow-block .b-themes-link {
+		margin: 0 0 0 -27px;
+	}
+	.b-lightyellow-block .b-object-title .arrow {
+		padding-left: 35px;
+	}
 
 /* Yellow block */
 .b-yellow-block {
@@ -1407,6 +1496,14 @@ SUB {
 	.b-slideshow-objects .frame {
 		margin-left: -7px;
 
+		-o-border-top-left-radius: 5px;
+		-o-border-top-right-radius: 5px;
+		-ms-border-top-left-radius: 5px;
+		-ms-border-top-right-radius: 5px;
+		-moz-border-top-left-radius: 5px;
+		-moz-border-top-right-radius: 5px;
+		-webkit-border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 	}
@@ -1466,6 +1563,14 @@ SUB {
 	padding: 20px 0 0;
 	background-color: #000;
 
+	-o-border-top-left-radius: 6px;
+	-o-border-top-right-radius: 6px;
+	-ms-border-top-left-radius: 6px;
+	-ms-border-top-right-radius: 6px;
+	-moz-border-top-left-radius: 6px;
+	-moz-border-top-right-radius: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 }
