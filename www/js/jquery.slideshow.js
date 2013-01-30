@@ -15,6 +15,8 @@
 			dotSelectedClass: 'b-dot-selected',
 			slideShowObject: 'b-slideshow-objects',
 			firstSlideGallery: '.b-gallery-image:first',
+			balloon: 'slide-balloon',
+			elementsOnIllustration: '.flags',
 			slideBy: 1,
 			slidePerPage: 1,
 			slideWidth: 550,
@@ -38,6 +40,7 @@
 				frameContainer = $(SETTINGS.frameContainer, container),
 				linkOnGallery = $(SETTINGS.linkOnGallery),
 				firstSlideGallery = $(SETTINGS.firstSlideGallery, container),
+				elementsOnIllustration = $(SETTINGS.elementsOnIllustration),
 				slidesCount = slides.length,
 				slidesWidht = SETTINGS.slideWidth,
 				currentPage = 0;
@@ -173,6 +176,8 @@
 			}
 			
 			function switchSlide(){
+				slideBallon();
+				
 				var shift = shiftFrame();
 				if(shift == 7) frameContainer.width(slidesWidht).css('marginLeft','0');
 
@@ -188,6 +193,25 @@
 				
 				manageLinks();
 			}
+
+			function slideBallon(){
+				if(slides.eq(currentPage).hasClass(SETTINGS.balloon)) {
+					elementsOnIllustration.fadeIn(100);
+				}
+			}
 		});
 	};
 })( jQuery );
+
+
+
+
+
+
+
+
+
+
+
+
+

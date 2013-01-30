@@ -1,6 +1,7 @@
 $(function(){
     $('.b-breadcrumbs .item').dropDownMenu();
-
+    $('.flags').hide();
+    
     var slide_width = 959;
     if($('.l-container').hasClass('l-container-960')) slide_width = 960;
     $('#slideshow').slideShow({

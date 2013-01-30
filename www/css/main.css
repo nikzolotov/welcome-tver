@@ -1803,6 +1803,32 @@ SUB {
 		text-align: center;
 	}
 
+/* Balloon */
+.b-balloon {
+	position: relative;
+	z-index: 9999;
+	width: 168px;
+	height: 314px;
+	margin: 243px auto 0;
+}
+	.b-balloon .shadow {
+		background: url("../img/i/l-3.png") no-repeat scroll left top transparent;
+	    height: 228px;
+	    left: 79px;
+	    position: absolute;
+	    top: 80px;
+	    width: 163px;
+	    z-index: 10;
+	}
+	.b-balloon .ball {
+		position: absolute;
+		background: url("../img/i/l-0.png") no-repeat scroll left top transparent;
+	    height: 244px;
+	    left: 0;
+	    top: 0;
+	    width: 168px;
+	}
+
 /* Inwrought */
 .b-inwrought {
 	position: relative;
