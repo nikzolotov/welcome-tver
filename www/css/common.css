@@ -43,6 +43,7 @@ body {
 }
 
 .flags {
+	display: none;
 	font: normal 12px/14px Tahoma;
 }
 .flags li {

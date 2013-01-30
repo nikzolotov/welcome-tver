@@ -12,6 +12,14 @@ $(function(){
 	$('#indexSlideshow').slideShow({
 		slideFromKeyboard: true,
 		dots: true,
+		haveDots: true,
+		dotsContainerSelector: '.conts',
+		dotSelector: '.b-cont',
+		dotSample: '<a class="b-cont" href="?"><b></b></a>',
+		dotSelectedClass: 'b-cont-selected',
+		prevLinkSelector: '.b-icon-prev-big',
+		nextLinkSelector: '.b-icon-next-big',
+		slideWidth: '100ps',
 		slideDistance: 0
 	});
 

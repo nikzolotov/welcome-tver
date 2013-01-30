@@ -21,7 +21,8 @@
 			slideDistance: 38,
 			animationTime: 300,
 			slideFromKeyboard: false,
-			dots: false
+			dots: false,
+			haveDots: false
 		};
 		
 		return this.each(function(){
@@ -38,20 +39,35 @@
 				linkOnGallery = $(SETTINGS.linkOnGallery),
 				firstSlideGallery = $(SETTINGS.firstSlideGallery, container),
 				slidesCount = slides.length,
+				slidesWidht = SETTINGS.slideWidth,
 				currentPage = 0;
 				
-			container.add(slides).width(SETTINGS.slideWidth);
+			
 
 			if( SETTINGS.dots && slidesCount > 1 ){
 				var dots,
 					dotsContainer = $(SETTINGS.dotsContainerSelector, container);
-				
-				prepareDots();
+				if(!SETTINGS.haveDots) prepareDots();
+				else dots = $(SETTINGS.dotSelector, dotsContainer);
 			}
-			
+			sizeSlide();
+			$(window).resize(function(){
+				if(SETTINGS.slideWidth == '100ps'){
+					slidesWidht = $(window).width();
+					container.add(slides).width(slidesWidht);
+				}
+			});
 			manageLinks();
 			assignEvents();
 			sizeFrame();
+
+			function sizeSlide(){
+				if(slidesWidht == '100ps'){
+					slidesWidht = $(window).width();
+					container.add(slides).width(slidesWidht);
+				}
+				else container.add(slides).width(slidesWidht);
+			}
 
 
 			function shiftFrame() {
@@ -134,6 +150,7 @@
 				}
 				
 				if( SETTINGS.dots && slidesCount > 1 ){
+
 					dots.click(function(event){
 						var thisIndex = $(this).index();
 						changeSlide(thisIndex)
@@ -157,13 +174,13 @@
 			
 			function switchSlide(){
 				var shift = shiftFrame();
-				if(shift == 7) frameContainer.width(SETTINGS.slideWidth).css('marginLeft','0');
+				if(shift == 7) frameContainer.width(slidesWidht).css('marginLeft','0');
 
 				slidesContainer.animate({
-					marginLeft: (currentPage * (SETTINGS.slideWidth + SETTINGS.slideDistance) * SETTINGS.slideBy * -1)
+					marginLeft: (currentPage * (slidesWidht + SETTINGS.slideDistance) * SETTINGS.slideBy * -1)
 				}, SETTINGS.animationTime, function(){
 					var marginLeft = parseInt($(this).css('marginLeft'));
-					if(shift == 0) frameContainer.width(SETTINGS.slideWidth+7).css('marginLeft','-7px');
+					if(shift == 0) frameContainer.width(slidesWidht+7).css('marginLeft','-7px');
 					if(shift == -1) shift = 0;
 					
 					$(this).css('marginLeft', marginLeft-shift);
