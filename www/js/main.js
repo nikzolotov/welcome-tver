@@ -9,6 +9,11 @@ $(function(){
 		slideWidth: slide_width,
 		slideDistance: 0
 	});
+	$('#indexSlideshow').slideShow({
+		slideFromKeyboard: true,
+		dots: true,
+		slideDistance: 0
+	});
 
     var tiles_height = $('.b-tiles').height();
     if(tiles_height) $('.b-slideshow .slide').height(tiles_height-5);
@@ -19,13 +24,14 @@ $(function(){
 
 	$(".b-contents .item .link").click(function(){
 		var selected = $(this).attr('href');	
-		$.scrollTo(selected, 500, {offset:-20 });		
+		$.scrollTo(selected, 500, {offset:-28 });		
 		return false;
 	});	
 
 	
 	$('.b-top-contents').scrollingСontents();
 
+	//$('.b-contents .item').changeContents();
 
 });
 
@@ -34,12 +40,32 @@ $(function(){
 
 
 (function( $ ){
+	/*$.fn.changeContents = function(userOptions) {
+		var OPTIONS = {
+             links: '.link'
+        };
+        return this.each(function(index,element){
+        	if(userOptions) {
+		        $.extend( OPTIONS, userOptions );
+		    }
+        	var container = $(this),
+        		links_contents = $(OPTIONS.links, container),
+        		link_anchor = links_contents.attr('href'),
+        		object_anchor = $(link_anchor + '');
+
+        	function selected
+        	
+        });
+	};*/
 
 	$.fn.scrollingСontents = function(userOptions) {
 		var OPTIONS = {
             top: 20
         };
         return this.each(function(){
+        	if(userOptions) {
+		        $.extend( OPTIONS, userOptions );
+		    }
         	var contents = $(this),
         		coordinates = contents.offset(),
         		scroll_top = Math.round(coordinates.top),
@@ -51,7 +77,7 @@ $(function(){
 	        	toggleFixed(scroll_top, scrolled);
 	        	$(window).scroll(function(){
 	        		scrolled = $(window).scrollTop()
-	        		toggleFixed(scroll_top-23, scrolled);
+	        		toggleFixed(scroll_top-28, scrolled);
 	        	});
 	        }
 

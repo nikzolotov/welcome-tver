@@ -36,7 +36,7 @@
 				nextLink = $(SETTINGS.nextLinkSelector, container),
 				frameContainer = $(SETTINGS.frameContainer, container),
 				linkOnGallery = $(SETTINGS.linkOnGallery),
-				firstSlideGallery = $(SETTINGS.firstSlideGallery, container)
+				firstSlideGallery = $(SETTINGS.firstSlideGallery, container),
 				slidesCount = slides.length,
 				currentPage = 0;
 				
