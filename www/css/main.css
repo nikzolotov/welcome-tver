@@ -1910,8 +1910,6 @@ SUB {
 	.b-context-to-do .title {
 		display: inline-block;
 		margin-top: 0;
-		margin-left: -22px;
-		padding: 3px 15px 17px 22px;
 		font: 34px/36px 'Meta Pro Light',Arial,Helvetica,sans-serif;
 	}
 	.b-context-to-do .title-red {
@@ -1938,7 +1936,6 @@ SUB {
 	}
 		.b-context-to-do .b-themes-link .item {
 			display: block;
-			margin-left: 11px;
 		}
 
 
