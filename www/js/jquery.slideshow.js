@@ -17,6 +17,7 @@
 			firstSlideGallery: '.b-gallery-image:first',
 			balloon: 'slide-balloon',
 			elementsOnIllustration: '.flags',
+			elementBalloon: '.b-balloon',
 			slideBy: 1,
 			slidePerPage: 1,
 			slideWidth: 550,
@@ -41,6 +42,7 @@
 				linkOnGallery = $(SETTINGS.linkOnGallery),
 				firstSlideGallery = $(SETTINGS.firstSlideGallery, container),
 				elementsOnIllustration = $(SETTINGS.elementsOnIllustration),
+				elementBalloon = $(SETTINGS.elementBalloon),
 				slidesCount = slides.length,
 				slidesWidht = SETTINGS.slideWidth,
 				currentPage = 0;
@@ -197,6 +199,11 @@
 			function slideBallon(){
 				if(slides.eq(currentPage).hasClass(SETTINGS.balloon)) {
 					elementsOnIllustration.fadeIn(100);
+					elementBalloon.fadeIn(200);
+				}
+				else {
+					elementsOnIllustration.hide(100);
+					elementBalloon.hide(100);
 				}
 			}
 		});

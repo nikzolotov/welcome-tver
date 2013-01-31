@@ -1,7 +1,7 @@
 $(function(){
     $('.b-breadcrumbs .item').dropDownMenu();
     $('.flags').hide();
-    
+
     var slide_width = 959;
     if($('.l-container').hasClass('l-container-960')) slide_width = 960;
     $('#slideshow').slideShow({
@@ -39,6 +39,12 @@ $(function(){
 
 	
 	$('.b-top-contents').scrollingСontents();
+
+	var title_boxes = $('.b-mark-title-boxes .left-box, .b-mark-title-boxes .right-box')
+	title_boxes.hide();
+	setTimeout(function(){ 
+		title_boxes.fadeIn(200);
+	},500)
 
 	//$('.b-contents .item').changeContents();
 
