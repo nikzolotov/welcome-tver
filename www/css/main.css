@@ -1111,6 +1111,7 @@ SUB {
 .b-mark-title {
 	position: relative;
 	left: -8px;
+	max-width: 600px;
 	margin-bottom: 21px;
 	font: 48px/34px 'Meta Pro Thin',Arial,Helvetica,sans-serif
 	}
@@ -3065,7 +3066,7 @@ SUB {
 		margin: 0 auto 6px auto;
 		}
 	.b-gallery-image .sign {
-		padding-left: 50%;
+		/*padding-left: 50%;*/
 		}
 		.b-gallery-image .photographer {
 			display: block;
