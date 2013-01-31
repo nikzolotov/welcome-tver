@@ -1,0 +1,74 @@
+﻿
+.l-errors {
+	position: relative;
+	font: 20px/26px 'Meta Pro Light', Arial, Helvetica, sans-serif;
+	background: url('../img/containers/grad.png') repeat-x 0 bottom #6787a9;
+	color: #fff;
+}
+.l-column-732 {
+	position: relative;
+	width: 730px;
+	margin: 0 auto;
+	padding-top: 170px;
+	padding-left: 220px;
+	padding-bottom: 50px;
+}
+.l-column-700 {
+	width: 630px;
+	
+}
+	.l-errors a,
+	.l-errors a:visited {
+		color: #fff !important;
+	}
+	.l-errors a:hover {
+		color: #fcd757 !important;
+	}
+	.l-errors .b-logo {
+		top: 61px;
+		left: 200px;
+	}
+.b-errors {
+	display: inline-block;
+	margin-left: -220px;
+	margin-bottom: 37px;
+}
+	.b-errors .text {
+		position: relative;
+		display: inline-block;
+		
+	    margin: 0 0 9px -24px;
+	    
+	    font: 40px/43px 'Meta Pro Light', Arial, Helvetica, sans-serif;
+	    color: #fff;
+
+	    background-color: #2f4330;
+	}
+	.b-errors .arrow {
+		background: url("../img/containers/flag-errors.png") no-repeat scroll right 48% transparent;
+	    display: inline-block;
+	    width: 660px;
+		height: 151px;
+	    margin-right: -45px;
+	    padding: 20px 40px 14px 220px;
+	}
+.b-icon-404,
+.b-icon-500 {
+	position: absolute;
+	left: 24px;
+	top: -9px;
+	display: block;
+	width: 170px;
+	height: 206px;
+	background: url('../img/errors.png') no-repeat;
+}
+.b-icon-500 {
+	background-position: -170px 0;
+}
+
+
+
+
+
+
+

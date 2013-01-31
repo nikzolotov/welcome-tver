@@ -18,6 +18,8 @@
 			balloon: 'slide-balloon',
 			elementsOnIllustration: '.flags',
 			elementBalloon: '.b-ball',
+			signSlide: '.sign',
+			textSignSlide: '.b-gallery-image .sign .text',
 			slideBy: 1,
 			slidePerPage: 1,
 			slideWidth: 550,
@@ -43,6 +45,7 @@
 				firstSlideGallery = $(SETTINGS.firstSlideGallery, container),
 				elementsOnIllustration = $(SETTINGS.elementsOnIllustration),
 				elementBalloon = $(SETTINGS.elementBalloon),
+				textSignSlide = $(SETTINGS.textSignSlide, container),
 				slidesCount = slides.length,
 				slidesWidht = SETTINGS.slideWidth,
 				currentPage = 0;
@@ -62,6 +65,7 @@
 					container.add(slides).width(slidesWidht);
 				}
 			});
+			hiddenSign();
 			manageLinks();
 			assignEvents();
 			sizeFrame();
@@ -72,6 +76,15 @@
 					container.add(slides).width(slidesWidht);
 				}
 				else container.add(slides).width(slidesWidht);
+			}
+
+			function hiddenSign(){
+				textSignSlide.each(function(index, element){
+					if($(element).text() == ''){
+						$(element).parents(SETTINGS.signSlide).hide();
+					}
+				});
+				
 			}
 
 

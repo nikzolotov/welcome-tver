@@ -432,6 +432,7 @@ SUB {
 	.b-breadcrumbs .b-object-link {
 		margin: 0 !important;
 	}
+
 /* Purple arrow */
 .b-object-link {
 	display: inline-block;
@@ -472,6 +473,7 @@ SUB {
 			.b-breadcrumbs .item-last .b-object-link .down-arrow  {
 				right: 8px;
 			}
+			
 /*Sub menu for bread crumbs*/
 .b-sub-menu {
 	position: absolute;
@@ -1676,7 +1678,7 @@ SUB {
 		overflow: hidden;
 	}
 		.b-slideshow .slides {
-			width: 9999px;
+			width: 9999em;
 			}
 		.b-slideshow-index .slides {
 			width: 9999em;
