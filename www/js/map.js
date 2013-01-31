@@ -221,7 +221,18 @@
 		routePointsArray = new ymaps.GeoObjectArray(),
 		alphabet = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ы', 'Э', 'Ю', 'Я'],
 		routeTabLink = $('#route-tab-link'),
-		destinations = $('#destinations');
+		destinations = $('#destinations'),
+		pointsListing = $('#points-listing'),
+		pointTemplate =
+			'<li class="item" rel="{type}">' +
+				'<a rel="point-{id}" href="?" class="link">' +
+					'<div class="image-container">' +
+						'<img alt="{title}" src="img/points/{id}/point.jpg" class="image"/>' +
+					'</div>' +
+					'<h3 class="title"><span class="text">{title}</span></h3>' +
+				'</a>' +
+			'</li>',
+		pointsString = '';
 	
 	if( typeof POI === 'object' ){
 		for( var i = 0; i < POI.length; i++ ){
@@ -244,6 +255,12 @@
 					balloonLayout: balloonLayout,
 					balloonShadow: false
 				});
+				
+				pointsString += pointTemplate.supplant({
+					id: POI[i].points[j].id,
+					type: i,
+					title: POI[i].points[j].title
+				});
 			}
 			
 			pointsClusters[i] = new ymaps.Clusterer({
@@ -259,6 +276,8 @@
 			map.geoObjects.add(routePointsArray);
 			//map.geoObjects.add(fromClusterPoints);
 		}
+		
+		pointsListing.html(pointsString);
 	}
 	
 	// Фильтр точек и городов
@@ -266,8 +285,6 @@
 		citiesLink = $('#filter .js-city-link'),
 		selectedClass = 'selected',
 		clearAllButton = $('#clear-all');
-	
-	console.log(typeLinks);
 	
 	typeLinks
 		.addClass('selected')
@@ -277,10 +294,12 @@
 			
 			if( thisLink.hasClass(selectedClass) ){
 				map.geoObjects.remove(pointsClusters[thisLinkPosition]);
+				hidePointsInListing(thisLinkPosition);
 				thisLink.removeClass(selectedClass);
 			}
 			else{
 				map.geoObjects.add(pointsClusters[thisLinkPosition]);
+				showPointsInListing(thisLinkPosition);
 				thisLink.addClass(selectedClass);
 			}
 			
@@ -309,13 +328,25 @@
 		typeLinks.filter('.selected').click();
 	});
 	
-	
 	$('#filter-scroll').jScrollPane({
 		mouseWheelSpeed: 20
 	});
 	
 	// Выбор редакции
-	$('.b-point-links .link').click(function(event){
+	function showPointsInListing( _rel ){
+		$('.item[rel=' + _rel + ']', pointsListing).show();
+		$('#point-links-panel').show();
+	}
+	
+	function hidePointsInListing( _rel ){
+		$('.item[rel=' + _rel + ']', pointsListing).hide();
+		
+		if( $('.item:visible', pointsListing).length == 0 ){
+			$('#point-links-panel').hide();
+		}
+	}
+	
+	$('.link', pointsListing).live('click', function(event){
 		var thisPointId = $(this).attr('rel').substr(6),
 			thisIndexes = getPointsIndexes(thisPointId),
 			thisPoint = points[thisIndexes.i][thisIndexes.j],
@@ -523,7 +554,7 @@
 				routeMarker: getAphabetLetter(i),
 				title: geoObject.properties.get('title'),
 				rel: thisRel
-			});;
+			});
 		});
 		
 		$('.b-search-destination-form', destinations).unbind();
@@ -761,11 +792,10 @@
 	
 	if( typeof CATEGORIES_IDS !== 'undefined' ){
 		typeLinks.filter(function(){
-			console.log(parseInt($(this).attr('rel').substr(9), 10));
 			return CATEGORIES_IDS.indexOf(parseInt($(this).attr('rel').substr(9), 10)) != -1;
 		}).click();
 	}
-	/*
+	
 	// Точка, переданная в url
 	if( typeof POI_ID !== 'undefined' ){
 		var pointFromIdIndexes = getPointsIndexes(POI_ID),
@@ -776,7 +806,7 @@
 		setTimeout(function(){
 			pointFromId.balloon.open();
 		}, 500);
-	}*/
+	}
 });
 
 function getPointsIndexes(_id){
