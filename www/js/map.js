@@ -267,6 +267,8 @@
 		selectedClass = 'selected',
 		clearAllButton = $('#clear-all');
 	
+	console.log(typeLinks);
+	
 	typeLinks
 		.addClass('selected')
 		.click(function(event){
@@ -305,6 +307,11 @@
 	clearAllButton.click(function(){
 		citiesLink.filter('.selected').click();
 		typeLinks.filter('.selected').click();
+	});
+	
+	
+	$('#filter-scroll').jScrollPane({
+		mouseWheelSpeed: 20
 	});
 	
 	// Выбор редакции
@@ -754,10 +761,11 @@
 	
 	if( typeof CATEGORIES_IDS !== 'undefined' ){
 		typeLinks.filter(function(){
+			console.log(parseInt($(this).attr('rel').substr(9), 10));
 			return CATEGORIES_IDS.indexOf(parseInt($(this).attr('rel').substr(9), 10)) != -1;
 		}).click();
 	}
-	
+	/*
 	// Точка, переданная в url
 	if( typeof POI_ID !== 'undefined' ){
 		var pointFromIdIndexes = getPointsIndexes(POI_ID),
@@ -768,7 +776,7 @@
 		setTimeout(function(){
 			pointFromId.balloon.open();
 		}, 500);
-	}
+	}*/
 });
 
 function getPointsIndexes(_id){
