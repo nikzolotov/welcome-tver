@@ -17,7 +17,7 @@
 			firstSlideGallery: '.b-gallery-image:first',
 			balloon: 'slide-balloon',
 			elementsOnIllustration: '.flags',
-			elementBalloon: '.b-balloon',
+			elementBalloon: '.b-ball',
 			slideBy: 1,
 			slidePerPage: 1,
 			slideWidth: 550,

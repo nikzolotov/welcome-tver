@@ -1803,9 +1803,13 @@ SUB {
 		margin-bottom: 97px;
 		text-align: center;
 	}
+	.b-slideshow-index .slide-balloon {
+		position: static;
+		padding: 0;
+	}
 
 /* Balloon */
-.b-balloon {
+.b-ball {
 	position: absolute;
 	top: 300px;
 	left: 50%;
@@ -1815,7 +1819,7 @@ SUB {
 	height: 314px;
 	margin: 0 0 0 -84px;
 }
-	.b-balloon .shadow {
+	.b-ball .shadow {
 		background: url("../img/i/l-3.png") no-repeat scroll left top transparent;
 	    height: 228px;
 	    left: 79px;
@@ -1824,7 +1828,7 @@ SUB {
 	    width: 163px;
 	    z-index: 10;
 	}
-	.b-balloon .ball {
+	.b-ball .ball {
 		position: absolute;
 		background: url("../img/i/l-0.png") no-repeat scroll left top transparent;
 	    height: 244px;
@@ -1832,7 +1836,7 @@ SUB {
 	    top: 0;
 	    width: 168px;
 	}
-.b-balloon-hidden {
+.b-ball-hidden {
 
 }
 
