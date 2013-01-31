@@ -3,439 +3,509 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<title>Тверская область</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/common.css?133" media="screen"/>
+
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
-		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
 		<script type="text/javascript" src="js/jquery.slideshow.js"></script>
+		<script type="text/javascript" src="js/jquery.indexslideshow.js"></script>
 		<script type="text/javascript" src="js/jquery.scrollto.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
-		<div class="l-header">
-			<div class="l-header-inner">
-				<a class="b-logo" href="/">
-					<img class="image" src="img/logo.png" alt="Тверская область"/>
-				</a>
-				<ul class="b-main-menu">
-					<li class="item">
-						<a class="link" href="?">Факты</a>
-					</li>
-					<li class="item">
-						<a class="link" href="?">Места</a>
-					</li>
-					<li class="item">
-						<a class="link selected" href="?">Чем заняться</a>
-					</li>
-					<li class="item">
-						<a class="link" href="?">События</a>
-					</li>
-					<li class="item">
-						<a class="link" href="?">Размещение и сервис</a>
-					</li>
-				</ul>
+		<div class="l-back-layer">
+        	<div id="illustrations" class="b-illustrations">
+	        	<div class="b-illustration">
+		        	<ol class="flags">
+	                    <li class="volga"><a href="map.html?point=9"><span>Исток реки<br />Волги</span></a></li>
+	                    <li class="nil"><a href="map.html?point=11"><span>Нило-Столобенская<br />Пустынь</span></a></li>
+	                    <li class="nikitin"><a href="map.html?point=12"><span>Памятник купцу<br />Афанасию Никитину</span></a></li>
+	                    <li class="rv"><a href="map.html?point=8"><span>Речной вокзал<br />в Твери</span></a></li>
+	                </ol>
+	        	</div>
+        	</div>
+        </div>
+        <div class="l-page-index">
+	        <div class="l-header">
+				<div class="l-header-inner">
+					<a class="b-logo" href="/">
+						<img class="image" src="img/logo.png" alt="Тверская область"/>
+					</a>
+					<ul class="b-main-menu">
+						<li class="item">
+							<a class="link" href="?">Факты</a>
+						</li>
+						<li class="item">
+							<a class="link selected" href="?">Места</a>
+						</li>
+						<li class="item">
+							<a class="link" href="?">Чем заняться</a>
+						</li>
+						<li class="item">
+							<a class="link" href="?">События</a>
+						</li>
+						<li class="item">
+							<a class="link" href="?">Размещение и сервис</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="l-container">
-			<ul class="b-breadcrumbs">
-				<li class="item">
-					<a href="index.html" class="b-object-link">
-						<span class="text">
-							<span class="arrow">
-								<b class="b-icon b-icon-logo"><b></b></b>
-							</span>
-						</span>
-					</a>
-				</li>
-				<li class="item">
-					<a href="index.html" class="b-object-link">
-						<span class="text">
-							<span class="arrow">
-								<span class="link">Культурное наследие
-									<b class="down-arrow"></b>
-								</span>
-							</span>
-						</span>
-					</a>
-					<div class="b-sub-menu">
-						<ul class="menu">
-							<li class="item"><a class="link" href="?item-1">Жизнь на ферме</a></li>
-							<li class="item"><a class="link" href="?item-1">Рыбалка</a></li>
-							<li class="item"><a class="link" href="?item-1">Жемчужены архитектуры</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="item item-last">
-					<a href="index.html" class="b-object-link">
-						<span class="text">
-							<span class="arrow">
-								<span class="link">
-									Дворянские усадьбы
-									<b class="down-arrow"></b>
-								</span>
-							</span>
-						</span>
-					</a>
-					<div class="b-sub-menu">
-						<ul class="menu">
-							<li class="item"><a class="link" href="?item-1">Жизнь на ферме</a></li>
-							<li class="item"><a class="link" href="?item-1">Рыбалка</a></li>
-							<li class="item"><a class="link" href="?item-1">Жемчужены архитектуры архитектуры</a></li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-			<div class="l-content">
-				<div id="slideshow" class="b-slideshow b-slideshow-objects">
+			<div class="l-container-slideshow">
+				<div id="indexSlideshow" class="b-slideshow-index">
 					<div class="frame">
 						<div class="slides">
-							<div class="slide slide-title">
-								<div id="tiles" class="b-tiles">
-									<div class="tile tile-2-1 tile-top-left b-green-block">
-										<div class="inner">
-											<img src="img/tmp/likes.png" alt="" style="display: block; margin-bottom: 17px"/>
-											<h1 class="b-object-title">
-												<span class="shadow-arrow">
-													<span class="text">
-														<span class="arrow">Усадьба Василёво</span>
+							<div class="slide">
+								<div class="l-centering">
+									<h1 class="b-mark-title-boxes">
+										<span class="text"> Посети тверскую область!</span>
+										<i class="left-box"><i></i></i>
+										<i class="right-box"><i></i></i>
+									</h1>
+								</div>
+								<div class="l-container l-container-960">
+									<img src="img/tmp/likes.png" alt="" style="position: absolute; z-index: 999; display: block; margin: -31px 0 0 14px;"/>
+									<div class="l-content">
+										<div id="tiles" class="b-tiles b-tiles-index b-tiles-15">
+											<div class="tile tile-2-2 tile-top-left">
+												<a class="b-marked-link" href="?">
+													<img class="image" src="img/tmp/story-preview-5.jpg" alt=""/>
+													<span class="b-mark b-mark-top">
+														<span class="arrow">Топ стори об области в целом?</span>
 													</span>
-												</span>
-											</h1>
-											<ul class="b-features b-features-compact">
-												<li class="item large-icon">
-													<b class="b-icon b-icon-bicycle"><b></b></b>
-													<span class="label">12 суток <br/>на тракторе</span>
-												</li><li class="item">
-													<b class="b-icon b-icon-money"><b></b></b>
-													<span class="label">Посещение <br/>платное</span>
-												</li><li class="item">
-													<b class="b-icon b-icon-treasure"><b></b></b>
-													<span class="label">Руины, <br/>клад</span>
-												</li><li class="item">
-													<b class="b-icon b-icon-wifi"><b>Wi-Fi</b></b>
-												</li><li class="item">
-													<b class="b-icon b-icon-wifi"><b>Wi-Fi</b></b>
-												</li><li class="item">
-													<b class="b-icon b-icon-wifi"><b>Wi-Fi</b></b>
-												</li>
-											</ul>
+												</a>
+											</div>
+											<div class="tile">
+												<a class="b-marked-link" href="?">
+													<div style="width: 188px; height: 188px; background: #923338"></div>
+													<span class="b-mark">
+														<span class="arrow">Наше все</span>
+													</span>
+												</a>
+											</div>
+											<div class="tile tile-2-1 tile-top-right">
+												<a class="b-marked-link" href="?">
+													<img class="image" src="img/tmp/story-preview-7.jpg" alt=""/>
+													<span class="b-mark">
+														<span class="arrow">Знакомьтесь тверь!</span>
+													</span>
+												</a>
+											</div>
+											<div class="tile tile-2-1">
+												<a class="b-marked-link" href="?">
+													<img class="image" src="img/tmp/story-preview-4.jpg"/>
+													<span class="b-mark">
+														<span class="arrow">Отдых на ферме</span>
+													</span>
+												</a>
+											</div>
+											<div class="tile">
+												<a class="b-marked-link" href="?">
+													<img class="image" src="img/tmp/story-preview-2.jpg"/>
+													<span class="b-mark">
+														<span class="arrow">Отдых на воде</span>
+													</span>
+												</a>
+											</div>
+											
+											<div class="tile tile-2-1 tile-bottom-left">
+												<img src="img/tmp/map-preview-2.png" class="image" alt=""/>
+												<div class="b-map-link b-map-link-top">
+													<a class="link" href="?map"><span class="text">&nbsp;Исследуй область&nbsp;<br/>&nbsp;на карте&nbsp;</span></a>
+												</div>
+											</div>
+											<div class="tile">
+												<a class="b-marked-link" href="?">
+													<img class="image" src="img/tmp/story-preview-10.jpg"/>
+													<span class="b-mark">
+														<span class="arrow">Яхтинг в конаково</span>
+													</span>
+												</a>
+											</div>
+											
+											<div class="tile tile-2-1 tile-bottom-right">
+												<a class="b-marked-link" href="?">
+													<img class="image" src="img/tmp/story-preview-8.jpg"/>
+													<div class="b-map-link">
+													<a class="link" href="?map"><span class="text">&nbsp;Как добраться&nbsp;<br/>&nbsp;и другие факты&nbsp;</span></a>
+												</div>
+												</a>
+											</div>
 										</div>
-										<div class="links">
-											<div class="l-column-300 l-intercolumn-44">
-												<h2 class="b-small-title b-first-title">Чем заняться</h2>
-												<ul class="b-tags b-tags-compact b-last-textblock">
+									</div>
+									<script type="text/javascript">
+										$('#tiles').masonry({
+											itemSelector: '.tile',
+											columnWidth: 193
+										});
+									</script>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="l-container">
+									<div class="l-column-950">
+										<div class="b-inwrought b-inwrought-red">
+											<div class="b-about-objects">
+												<h1 class="b-title-point">
+													<a href="?" class="link">
+														Культурное наследие
+													</a>
+												</h1>
+												<p class="summary">Регион разнообразен, открывать себе его можно долго и по-разному: здесь сердце русской земли, много настоящего и ценного.</p>
+												<ul class="b-objects b-objects-narrow">
 													<li class="item">
-														<a class="link" href="?">Пеший туризм</a>
-													</li>
-													<li class="item">
-														<a class="link" href="?">Снегоходы</a>
-													</li>
-													<li class="item">
-														<a class="link" href="?">Бездорожье</a>
-													</li>
-													<li class="item">
-														<a class="link" href="?">Велотуризм</a>
+														<a class="link" href="?object-1">
+															<span class="b-image-frame b-image-frame-red-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-1.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Музей деревянного зодчества
+														</a>
+													</li><li class="item">
+														<a class="link" href="?object-2">
+															<span class="b-image-frame b-image-frame-red-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-2.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Могила А. П. Керн
+														</a>
+													</li><li class="item">
+														<a class="link" href="?pushkin">
+															<span class="b-image-frame b-image-frame-red-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-1.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Музей деревянного зодчества
+														</a>
+													</li><li class="item">
+														<a class="link" href="?object-2">
+															<span class="b-image-frame b-image-frame-red-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-2.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Могила А. П. Керн
+														</a>
 													</li>
 												</ul>
 											</div>
-											<div class="l-column-300" style="padding-top: 5px;">
-												<a class="b-place-link" href="?"><b class="b-icon b-icon-pin"><b></b></b>Торжокский район</a>
+											<div class="add-links">
+												<ul class="links">
+													<li class="item">
+														<a href="?1" class="link">Культурное наследие</a>
+													</li>
+													<li class="item" class="link">
+														<a href="?1" class="link">Объекты на карте</a>
+													</li>
+												</ul>
 											</div>
-										</div>
-									</div>
-									<div class="tile tile-top-right">
-										<a class="b-link-on-gallery" href="?">
-											<img class="image" src="img/tmp/gallery-preview-1.jpg" alt=""/>
-										</a>
-									</div>
-									<div class="tile">
-										<img src="img/tmp/map-preview-1.jpg" alt=""/>
-										<div class="b-map-link">
-											<a class="link" href="?map"><span class="text">&nbsp;Посмотреть&nbsp;<br/>&nbsp;на карте&nbsp;</span></a>
-										</div>
-									</div>
-									<div class="tile">
-										<a class="b-video-link" href="?">
-											<img src="img/tmp/video-preview-1.jpg" alt=""/>
-											<b class="b-icon b-icon-video"><b></b></b>
-										</a>
-									</div>
-									<div class="tile b-blue-block">
-										<div class="inner b-contacts">
-											<h2 class="title" style="margin-bottom: 28px">Как добраться</h2>
-											<p>170000, Россия, Тверская&nbsp;обл., д.&nbsp;Митино, усадьба Василёво</p>
-											<p>(4822) 777-777 <br/><a class="link" href="http://www.vasilevo.ucoz.ru">www.vasilevo.ucoz.ru</a></p>
+											<i class="inwrought-right inwrought-right-red"></i>
+											<i class="inwrought-left inwrought-left-red"></i>
 										</div>
 									</div>
 								</div>
-								<script type="text/javascript">
-									$('#tiles').masonry({
-										itemSelector: '.tile',
-										columnWidth: 321
-									});
-								</script>
 							</div>
-							<div class="b-gallery-image slide">
-								<img class="image" alt="" src="img/tmp/gallery-image-1.jpg">
-								<div class="sign">
-									<div class="text">Места, которые сейчас входят в территорию Конаковского района, исторически известны с 12 века, когда они входили в состав Киевского государства.</div>
+							<div class="slide">
+								<div class="l-container">
+									<div class="l-column-950">
+										<div class="b-inwrought b-inwrought-green">
+											<div class="b-about-objects">
+												<h1 class="b-title-point">
+													<a href="?" class="link">
+														Культурное наследие
+													</a>
+												</h1>
+												<p class="summary">Регион разнообразен, открывать себе его можно долго и по-разному: здесь сердце русской земли, много настоящего и ценного.</p>
+												<ul class="b-objects b-objects-narrow">
+													<li class="item">
+														<a class="link" href="?object-1">
+															<span class="b-image-frame b-image-frame-green-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-1.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Музей деревянного зодчества
+														</a>
+													</li><li class="item">
+														<a class="link" href="?object-2">
+															<span class="b-image-frame b-image-frame-green-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-2.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Могила А. П. Керн
+														</a>
+													</li><li class="item">
+														<a class="link" href="?pushkin">
+															<span class="b-image-frame b-image-frame-green-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-1.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Музей деревянного зодчества
+														</a>
+													</li><li class="item">
+														<a class="link" href="?object-2">
+															<span class="b-image-frame b-image-frame-green-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-2.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Могила А. П. Керн
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="add-links">
+												<ul class="links">
+													<li class="item">
+														<a href="?1" class="link">Культурное наследие</a>
+													</li>
+													<li class="item" class="link">
+														<a href="?1" class="link">Объекты на карте</a>
+													</li>
+												</ul>
+											</div>
+											<i class="inwrought-right inwrought-right-green"></i>
+											<i class="inwrought-left inwrought-left-green"></i>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="b-gallery-image slide">
-								<img class="image" alt="" src="img/tmp/image.jpg">
-								<div class="sign">
-									<div class="text">Места, которые сейчас входят в территорию Конаковского района, исторически известны с 12 века, когда они входили в состав Киевского государства.</div>
+							<div class="slide">
+								<div class="l-container">
+									<div class="l-column-950">
+										<div class="b-inwrought b-inwrought-blue">
+											<div class="b-about-objects">
+												<h1 class="b-title-point">
+													<a href="?" class="link">
+														Культурное наследие
+													</a>
+												</h1>
+												<p class="summary">Регион разнообразен, открывать себе его можно долго и по-разному: здесь сердце русской земли, много настоящего и ценного.</p>
+												<ul class="b-objects b-objects-narrow">
+													<li class="item">
+														<a class="link" href="?object-1">
+															<span class="b-image-frame b-image-frame-blue-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-1.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Музей деревянного зодчества
+														</a>
+													</li><li class="item">
+														<a class="link" href="?object-2">
+															<span class="b-image-frame b-image-frame-blue-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-2.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Могила А. П. Керн
+														</a>
+													</li><li class="item">
+														<a class="link" href="?pushkin">
+															<span class="b-image-frame b-image-frame-blue-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-1.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Музей деревянного зодчества
+														</a>
+													</li><li class="item">
+														<a class="link" href="?object-2">
+															<span class="b-image-frame b-image-frame-blue-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-2.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Могила А. П. Керн
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="add-links">
+												<ul class="links">
+													<li class="item">
+														<a href="?1" class="link">Культурное наследие</a>
+													</li>
+													<li class="item" class="link">
+														<a href="?1" class="link">Объекты на карте</a>
+													</li>
+												</ul>
+											</div>
+											<i class="inwrought-right inwrought-right-blue"></i>
+											<i class="inwrought-left inwrought-left-blue"></i>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="b-gallery-image slide">
-								<img class="image" alt="" src="img/tmp/gallery-image-1.jpg">
-								<div class="sign">
-									<div class="text">Места, которые сейчас входят в территорию Конаковского района, исторически известны с 12 века, когда они входили в состав Киевского государства.</div>
+							<div class="slide">
+								<div class="l-container">
+									<div class="l-column-950">
+										<div class="b-inwrought b-inwrought-brown">
+											<div class="b-about-objects">
+												<h1 class="b-title-point">
+													<a href="?" class="link">
+														Культурное наследие
+													</a>
+												</h1>
+												<p class="summary">Регион разнообразен, открывать себе его можно долго и по-разному: здесь сердце русской земли, много настоящего и ценного.</p>
+												<ul class="b-objects b-objects-narrow">
+													<li class="item">
+														<a class="link" href="?object-1">
+															<span class="b-image-frame b-image-frame-brown-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-1.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Музей деревянного зодчества
+														</a>
+													</li><li class="item">
+														<a class="link" href="?object-2">
+															<span class="b-image-frame b-image-frame-brown-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-2.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Могила А. П. Керн
+														</a>
+													</li><li class="item">
+														<a class="link" href="?pushkin">
+															<span class="b-image-frame b-image-frame-brown-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-1.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Музей деревянного зодчества
+														</a>
+													</li><li class="item">
+														<a class="link" href="?object-2">
+															<span class="b-image-frame b-image-frame-brown-132 b-image-frame-132">
+																<span class="inner">
+																	<img src="img/tmp/object-132-2.jpg" alt=""/>
+																</span>
+																<i class="frame"></i>
+															</span>
+															Могила А. П. Керн
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="add-links">
+												<ul class="links">
+													<li class="item">
+														<a href="?1" class="link">Культурное наследие</a>
+													</li>
+													<li class="item" class="link">
+														<a href="?1" class="link">Объекты на карте</a>
+													</li>
+												</ul>
+											</div>
+											<i class="inwrought-right inwrought-right-brown"></i>
+											<i class="inwrought-left inwrought-left-brown"></i>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="b-gallery-image slide">
-								<img class="image" alt="" src="img/tmp/gallery-image-1.jpg">
-								<div class="sign">
-									<div class="text">Места, которые сейчас входят в территорию Конаковского района, исторически известны с 12 века, когда они входили в состав Киевского государства.</div>
-								</div>
+							<div class="slide slide-balloon">
 							</div>
 						</div>
 					</div>
-					<a class="b-icon b-icon-prev hidden" href="?"><b>Предыдущие</b></a>
-					<a class="b-icon b-icon-next" href="?"><b>Следующие</b></a>
-					<div class="dots b-dots-gallery"></div>
-				</div>
-				<div class="l-wrapper">
-					<div class="l-column-492 l-shift-112">
-						<div class="l-with-context">
-							<div class="b-top-contents">
-								<ul class="b-contents">
-									<li class="item">
-										<a class="link" href="#history_1">
-											<span class="text">Усадьба</span>
-										</a>
-									</li>
-									<li class="item">
-										<a class="link" href="#history_2">
-											<span class="text">История усадьбы</span>
-										</a>
-									</li>
-									<li class="item">
-										<a class="link" href="#history_3">
-											<span class="text">Валунный арочный мост</span>
-										</a>
-									</li>
-									<li class="item">
-										<a class="link" href="#history_4">
-											<span class="text">Этнографический музей</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<p class="b-intro" id="history_1">Усадьба Василёво — архитектурно-художест&shy;венный ансамбль конца XVIII — начала XIX веков. Усадьба расположена на берегу реки Тверцы приблизительно в 3–4 км выше по течению реки севернее города Торжка. На базе усадьбы располагается музей деревянного зодчества.</p>
-							<div class="l-context">
-								<h3 class="b-thin-title b-first-title">Отзывы и советы</h3>
-								<a href="?advice-1">Прекрасное место, можно будет заехать еще разок...</a>
-								<h3 class="b-thin-title">Туроператоры и&nbsp;маршруты</h3>
-								<a href="?advice-1">Компания бубен-тур сервис</a>
-							</div>
+					<a class="b-icon b-icon-prev-big hidden" href="?"><b>Предыдущие</b></a>
+					<a class="b-icon b-icon-next-big" href="?"><b>Следующие</b></a>
+					<div class="conts">
+						<div class="inner">
+							<a class="b-cont b-cont-main b-cont-selected" href="?">
+								<span class="area-icon">
+									<b class="b-icon b-icon-main"><b></b></b>
+								</span>
+								<span class="text text-main">Обзор</span>
+								<i class="border"></i>
+							</a>
+							<a class="b-cont b-cont-red" href="?">
+								<span class="area-icon">
+									<b class="b-icon b-icon-red"><b></b></b>
+								</span>
+								<span class="text text-red">Культурное наследие</span>
+								<i class="border"></i>
+							</a>
+							<a class="b-cont b-cont-green" href="?">
+								<span class="area-icon">
+									<b class="b-icon b-icon-green"><b></b></b>
+								</span>
+								<span class="text text-green">Дикая природа</span>
+								<i class="border"></i>
+							</a>
+							<a class="b-cont b-cont-blue" href="?">
+								<span class="area-icon">
+									<b class="b-icon b-icon-blue"><b></b></b>
+								</span>
+								<span class="text text-blue">Отдых на воде</span>
+								<i class="border"></i>
+							</a>
+							<a class="b-cont b-cont-brown" href="?">
+								<span class="area-icon">
+									<b class="b-icon b-icon-brown"><b></b></b>
+								</span>
+								<span class="text text-brown">Приключения и спорт</span>
+								<i class="border"></i>
+							</a>
+							<a class="b-cont b-cont-balloon" href="?">
+								<span class="area-icon">
+									<b class="b-icon b-icon-balloon"><b></b></b>
+								</span>
+								<span class="text text-balloon">Исследуй интересное</span>
+								<i class="border"></i>
+							</a>
 						</div>
-						<h2 id="history_2">История усадьбы</h2>
-						<div class="l-with-context">
-							<div class="b-more">
-								<div class="frame" style="height: 154px">
-									<p>Усадьба принадлежала тверскому дворянину Д. Львову, для которого в конце XVIII века его дальним родственником, знаменитым архитектором, уроженцом Тверской губернии Н. А. Львовым и был построен главный дом. В настоящее время главный дом усадьбы не сохранился (сгорел), но на местности можно определить контуры бывшего строения по сохранившимся остаткам фундамента дома. До нашего времени сохранился двухэтажный флигель этой усадьбы, перестроенный из оранжереи.</p>
-								</div>
-								<i class="fader"></i>
-								<a class="link" href="?more">Продолжение истории</a>
-							</div>
-							<div class="l-context">
-								<h3 class="b-first-title">Известные люди</h3>
-								<ul class="b-objects b-objects-compact">
-									<li class="item">
-										<a href="?person-1">
-											<span class="b-image-frame b-image-frame-76">
-												<span class="inner">
-													<img src="img/tmp/object-76-1.jpg" alt=""/>
-												</span>
-												<i class="frame"></i>
-											</span>
-											Пушкин A. C.
-										</a>
-									</li><li class="item">
-										<a href="?person-2">
-											<span class="b-image-frame b-image-frame-76">
-												<span class="inner">
-													<img src="img/tmp/object-76-2.jpg" alt=""/>
-												</span>
-												<i class="frame"></i>
-											</span>
-											Львов Н. А.
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<h2>Еще одна история усадьбы</h2>
-						<div class="l-with-context">
-							<div class="b-more">
-								<div class="frame" style="height: 154px">
-									<p>Усадьба принадлежала тверскому дворянину Д. Львову, для которого в конце XVIII века его дальним родственником, знаменитым архитектором, уроженцом Тверской губернии Н. А. Львовым и был построен главный дом. В настоящее время главный дом усадьбы не сохранился (сгорел), но на местности можно определить контуры бывшего строения по сохранившимся остаткам фундамента дома. До нашего времени сохранился двухэтажный флигель этой усадьбы, перестроенный из оранжереи. Усадьба принадлежала тверскому дворянину Д. Львову, для которого в конце XVIII века его дальним родственником, знаменитым архитектором, уроженцом Тверской губернии Н. А. Львовым и был построен главный дом. В настоящее время главный дом усадьбы не сохранился (сгорел), но на местности можно определить контуры бывшего строения по сохранившимся остаткам фундамента дома. До нашего времени сохранился двухэтажный флигель этой усадьбы, перестроенный из оранжереи.</p>
-								</div>
-								<i class="fader"></i>
-								<a class="link" href="?more">Продолжение истории</a>
-							</div>
-							<div class="l-context">
-								<h3 class="b-first-title">Известные люди</h3>
-								<ul class="b-objects b-objects-compact">
-									<li class="item">
-										<a href="?person-1">
-											<span class="b-image-frame b-image-frame-76">
-												<span class="inner">
-													<img src="img/tmp/object-76-1.jpg" alt=""/>
-												</span>
-												<i class="frame"></i>
-											</span>
-											Пушкин A. C.
-										</a>
-									</li><li class="item">
-										<a href="?person-2">
-											<span class="b-image-frame b-image-frame-76">
-												<span class="inner">
-													<img src="img/tmp/object-76-2.jpg" alt=""/>
-												</span>
-												<i class="frame"></i>
-											</span>
-											Львов Н. А.
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<h2>Что интересного?</h2>
-						<div class="l-with-context">
-							<p>На территории усадьбы располагается каскад из трех прудов, на ручье, спускающемуся к реке Тверце. На ручье архитектором Н. А. Львовым были выполнены запруды из камней и знаменитый стометровый арочный валунный мост с гротами, выполненный в технике архивольт, являющийся настоящим шедевром архитектурной мысли.</p>
-							<ul class="b-features">
-								<li class="item">
-									<b class="b-icon b-icon-cafe"><b></b></b>
-									<span class="label">Кафе</span>
-								</li><li class="item">
-									<b class="b-icon b-icon-cafe"><b></b></b>
-									<span class="label">Сувенирная лавка</span>
-								</li><li class="item">
-									<b class="b-icon b-icon-cafe"><b></b></b>
-									<span class="label">Туалет</span>
-								</li><li class="item">
-									<b class="b-icon b-icon-cafe"><b></b></b>
-									<span class="label">Сеновал</span>
-								</li>
-							</ul>
-							<div class="b-event">
-								<h3 class="title">Троицкие гуляния</h3>
-								<div class="date">Проходят с 10 по 15 августа каждого года</div>
-								<p class="desc">Каждый год на территории усадьбы Василёво проходит фольклорный праздник «Троицкие гуляния». Сюда съезжаются гости со всей области, а также из Пскова, Владимирской области, Карелии.</p>
-							</div>
-							<div class="l-context">
-								<p><b class="b-icon b-icon-pin"><b></b></b>По пути из Ржева заедте также&nbsp;на&nbsp;поле снов.</p>
-								<p>И не забудьте землю под мостом&nbsp;поцеловать!</p>
-							</div>
-						</div>
-						<h2  id="history_3">Валунный арочный мост?</h2>
-						<p>На территории усадьбы располагается каскад из трех прудов, на ручье, спускающемуся к реке Тверце. На ручье архитектором Н. А. Львовым были выполнены запруды из камней и знаменитый стометровый арочный валунный мост с гротами, выполненный в технике архивольт, являющийся настоящим шедевром архитектурной мысли — «великолепная каменная симфония», как его называют поклонники творчества архитектора.</p>
-						<p>В настоящее время мост получил широкую известность под именем «Чёртов мост», которое он получил с лёгкой руки краеведа, который в 60-х годах XX века описывал имение в туристическом путеводителе и упомянул название острова на ручье — «Чёртов остров».</p>
-						<h3>Этнографический музей</h3>
-						<p>На базе усадьбы «Василёво» в 1976 году был создан Государственный Этнографический музей под открытым небом. Из разных районов Тверской области сюда были перевезены шедевры деревянного зодчества XVIII — начала XIX вв. В экспозицию музея входит около двух десятков памятников деревянной архитектуры.</p>
-						<p>Имеются и другие уникальные экспонаты, например, старинные камни-валуны раннехристианской эпохи из села Пречистая Каменка Кувшиновского района Тверской области с изображением креста и отпечатком «стопы Богородицы», по преданиям являвшейся жителям этих мест в XI веке.</p>
-					</div>					
+					</div>
+					<div class="b-ball b-ball-hidden">
+						<i class="shadow" style="opacity: 0.77;"></i>
+						<a class="ball" href="/map.html"></a>
+					</div>
 				</div>
-				<div class="l-shift-112">
-					<h2>Ещё про усадьбу на сайте</h2>
-					<ul class="b-stories-links">
-						<li class="item">
-							<a class="b-mark b-mark-link" href="?story-1">
-								<span class="arrow">
-									<span class="text">Архитектура Тверской земли</span>
-								</span>
-							</a>
-						</li>
-						<li class="item">
-							<a class="b-mark b-mark-link" href="?story-1">
-								<span class="arrow">
-									<span class="text">Барская жизнь</span>
-								</span>
-							</a>
-						</li>
-						<li class="item">
-							<a class="b-mark b-mark-link" href="?story-1">
-								<span class="arrow">
-									<span class="text">Мифическая земля</span>
-								</span>
-							</a>
-						</li>
-						<li class="item">
-							<a class="b-mark b-mark-link" href="?story-1">
-								<span class="arrow">
-									<span class="text">Как гуляют на Руси</span>
-								</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="l-content">
-				<div class="l-shift-112">
-					<h2  id="history_4" class="b-large-title b-first-title">Интересное рядом</h2>
-					<ul class="b-objects">
-						<li class="item">
-							<a href="?object-1">
-								<span class="b-image-frame b-image-frame-132">
-									<span class="inner">
-										<img src="img/tmp/object-132-1.jpg" alt=""/>
-									</span>
-									<i class="frame"></i>
-								</span>
-								Музей деревянного зодчества
-							</a>
-						</li><li class="item">
-							<a href="?object-2">
-								<span class="b-image-frame b-image-frame-132">
-									<span class="inner">
-										<img src="img/tmp/object-132-2.jpg" alt=""/>
-									</span>
-									<i class="frame"></i>
-								</span>
-								Могила А. П. Керн
-							</a>
-						</li><li class="item">
-							<a href="?pushkin">
-								<span class="b-image-frame b-image-frame-132">
-									<span class="inner">
-										<img src="img/tmp/object-132-1.jpg" alt=""/>
-									</span>
-									<i class="frame"></i>
-								</span>
-								Музей деревянного зодчества
-							</a>
-						</li>
-					</ul>
-				</div>
+
 			</div>
 			<div class="l-footer">
-				<ul class="b-tags">
-					<li class="item">
-						<a class="link" href="?">Статистика</a>
-					</li>
-					<li class="item">
-						<a class="link" href="?">Правовые основы туризма</a>
-					</li>
-					<li class="item">
-						<a class="link" href="?">Турфирмы и туроператоры</a>
-					</li>
-					<li class="item">
-						<a class="link" href="?">Контактная информация</a>
-					</li>
-				</ul>
-				<div class="b-copyright">
-					&copy;&nbsp;2012&nbsp;Министерство экономического развития Тверской области
+				<div class="l-container">
+					<ul class="b-tags b-tabs-index">
+						<li class="item">
+							<a class="link" href="?">Статистика</a>
+						</li>
+						<li class="item">
+							<a class="link" href="?">Правовые основы туризма</a>
+						</li>
+						<li class="item">
+							<a class="link" href="?">Турфирмы и туроператоры</a>
+						</li>
+						<li class="item">
+							<a class="link" href="?">Контактная информация</a>
+						</li>
+					</ul>
+					<div class="b-copyright b-copyright-index">
+						&copy;&nbsp;2012&nbsp;Министерство экономического развития Тверской области
+					</div>
 				</div>
 			</div>
 		</div>
