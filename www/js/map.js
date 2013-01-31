@@ -268,7 +268,7 @@
 		clearAllButton = $('#clear-all');
 	
 	typeLinks
-		.addClass(selectedClass)
+		.addClass('selected')
 		.click(function(event){
 			var thisLink = $(this),
 				thisLinkPosition = typeLinks.index(thisLink);
@@ -747,6 +747,15 @@
 			});
 			
 		}
+	}
+	
+	// Категории, переданные в url
+	typeLinks.click();
+	
+	if( typeof CATEGORIES_IDS !== 'undefined' ){
+		typeLinks.filter(function(){
+			return CATEGORIES_IDS.indexOf(parseInt($(this).attr('rel').substr(9), 10)) != -1;
+		}).click();
 	}
 	
 	// Точка, переданная в url
