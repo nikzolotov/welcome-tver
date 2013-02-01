@@ -187,61 +187,6 @@ $(function(){
         });
 	};
 
-	$.fn.moreHistory = function(userOptions) {
-		var OPTIONS = {
-			min_height: 154,
-            toggle: '.frame',
-            fader: '.fader',
-            link_activation: '.link'
-        };
-
-
-	    return this.each(function(){
-	    	if(userOptions) {
-		        $.extend( OPTIONS, userOptions );
-		    }
-		    var container = $(this),
-		    	link = $(OPTIONS.link_activation, container),
-		    	frame = $(OPTIONS.toggle, container),
-		    	fader = $(OPTIONS.fader, container);
-
-		    toggleFrame();
-
-		    function toggleFrame(){
-		    	link.toggle(function(event){
-		    		height_auto = frame.removeAttr('style').height() - 10;
-		    		frame.attr('style','height: 154px').stop().animate({
-		    			height: height_auto
-		    		},150, function(){
-		    			toggleShow('hidden')
-		    		});
-
-		    		event.preventDefault();
-		    	},function(event){
-		    		frame.animate({
-		    			height: OPTIONS.min_height + 'px'
-		    		},150);
-
-		    		toggleShow('show');
-
-		    		event.preventDefault();
-		    	});
-	    	}
-
-	    	function toggleShow(parametr){
-	    		if(parametr == 'hidden') {
-	    			fader.hide();
-	    			link.text('Скрыть')
-	    		}
-	    		else {
-					fader.show();
-					link.text('Продолжение истории')
-	    		}
-	    	}
-
-	    });
-	};
-
 	$.fn.dropDownMenu = function(userOptions) {
 		var OPTIONS = {
             speed: 150,
