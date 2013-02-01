@@ -3316,9 +3316,9 @@ SUB {
 	border-radius: 7px;
 	}
 	.b-filter-panel .scroll-pane {
-		width: 130px;
+		width: 129px;
 		height: 372px;
-		margin: 0 -10px 16px 0;
+		margin: 0 -9px 16px 0;
 		overflow: hidden;
 		}
 
