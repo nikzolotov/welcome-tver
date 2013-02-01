@@ -139,15 +139,15 @@ $(function(){
         		if(height_window < distance){
         			var value = distance/height_window;
 
-        			title_margin = 120/value*0.34;
+        			title_margin = 120/value*1.4;
         			if(title_margin < 96) title_margin = 96;
         			title.css('marginBottom', title_margin+'px');
 
-        			slide_padding = 136/value*0.8;
+        			slide_padding = 136/value*0.5;
         			if(slide_padding < 50) slide_padding = 50;
         			slides.css('paddingTop', slide_padding+'px');
 
-        			frame_margin = 120/value*0.6;
+        			frame_margin = 120/value*0.4;
         			if(frame_margin < 20) frame_margin = 20;
         			frame.css('marginBottom', frame_margin+'px');
         		}
