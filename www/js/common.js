@@ -18,13 +18,13 @@ $(function(){
 				if( illustrations.offset().left == (windowWidth - (illustrationWidth * illustrationsCount)) ){
 					moveSign = '+';
 				}
-				illustrations.css('left', illustrations.offset().left - windowScrollLeft - 1);
+				illustrations.css('left', illustrations.offset().left - windowScrollLeft - 0.5);
 			}
 			else{
 				if( illustrations.offset().left == 0 ){
 					moveSign = '-';
 				}
-				illustrations.css('left', illustrations.offset().left - windowScrollLeft + 1);
+				illustrations.css('left', illustrations.offset().left - windowScrollLeft + 0.5);
 			}
 		}
 		

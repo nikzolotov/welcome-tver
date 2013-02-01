@@ -159,8 +159,13 @@ SUB {
 /* =Layout
 --------------------------------------- */
 .l-page-index {
+	min-width: 1149px;
+}
+.l-container-slideshow {
+
 }
 .l-header {
+	margin-bottom: 39px;
 	background: #301633;
 	}
 	.l-header-inner {
@@ -339,9 +344,6 @@ SUB {
 .h-column-20 {
 	padding-right: 20px;
 	}
-.h-shift-44 {
-	padding-top: 44px;
-}
 
 /* =Clearfix and global
 --------------------------------------- */
@@ -415,7 +417,7 @@ SUB {
 
 /* Bread crumbs */
 .b-breadcrumbs {
-	margin: 15px 0 17px;
+	margin: -24px 0 17px;
 }
 	.b-breadcrumbs .item:before {
 		content: none;
@@ -714,13 +716,13 @@ SUB {
 		}
 /* 100 */
 .b-icon-prev-big {
-	top: 50%;
+	bottom: 243px;
 	left: 53px;
+	z-index: 999;
 	width: 102px;
 	height: 102px;
-	margin-top: -51px;
-	z-index: 3;
-	opacity: 0.;
+	margin: 0;
+	opacity: 0.9;
 }
 .b-icon-prev-big:hover {
 	opacity: 1;
@@ -729,12 +731,12 @@ SUB {
 		top: -168px;
 	}
 .b-icon-next-big {
-	top: 50%;
+	bottom: 243px;
 	right: 53px;
+	z-index: 999;
 	width: 102px;
 	height: 102px;
-	margin-top: -51px;
-	z-index: 3;
+	margin: 0;
 	opacity: 0.9;
 }
 .b-icon-next-big:hover {
@@ -1796,12 +1798,11 @@ SUB {
 .b-slideshow-index {
 	overflow: hidden;
 }
-	.b-slideshow-index .frame {
+	.b-slideshow-index .frame-slideshow {
+		position: relative;
 		margin-bottom: 120px;
 	}
 	.b-slideshow-index .slide {
-		position: relative;
-		z-index: 2;
 		float: left;
 		overflow: hidden;
 		padding-top: 136px;
@@ -2028,10 +2029,10 @@ SUB {
 	background: #9e940e;
 }
 .b-inwrought-blue {
-	background: #2163d1;
+	background: #2163D1;
 }
 .b-inwrought-brown {
-	background: #97400b;
+	background: #97400B;
 }
 
 /* About objects on index page */

@@ -83,7 +83,7 @@ $(function(){
 		
 	}
 
-
+	$('#indexSlideshow').resizeIndex();
 
 	//$('.b-contents .item').changeContents();
 
@@ -111,6 +111,51 @@ $(function(){
         	
         });
 	};*/
+	$.fn.resizeIndex = function(userOptions) {
+		var OPTIONS = {
+            title: '.b-mark-title-boxes',
+			frame: '.frame-slideshow',
+			slides: '.slide',
+			conts: '.conts'
+        };
+        return this.each(function(){
+        	if(userOptions) {
+		        $.extend( OPTIONS, userOptions );
+		    }
+        	var contents = $(this),
+        		title = $(OPTIONS.title, contents),
+        		frame = $(OPTIONS.frame, contents),
+        		slides = $(OPTIONS.slides, contents),
+        		conts = $(OPTIONS.conts, contents),
+        		height_window = $(window).height();
+
+        	$(window).resize(function(){
+        		height_window = $(window).height();
+        		settingSize();
+        	});
+        	settingSize();
+        	function settingSize(){
+        		var distance = conts.offset().top + conts.height() - 64;
+        		if(height_window < distance){
+        			var value = distance/height_window;
+
+        			title_margin = 120/value*0.34;
+        			if(title_margin < 96) title_margin = 96;
+        			title.css('marginBottom', title_margin+'px');
+
+        			slide_padding = 136/value*0.8;
+        			if(slide_padding < 50) slide_padding = 50;
+        			slides.css('paddingTop', slide_padding+'px');
+
+        			frame_margin = 120/value*0.6;
+        			if(frame_margin < 20) frame_margin = 20;
+        			frame.css('marginBottom', frame_margin+'px');
+        		}
+        	}
+        	
+        });
+	};
+
 
 	$.fn.scrollingСontents = function(userOptions) {
 		var OPTIONS = {

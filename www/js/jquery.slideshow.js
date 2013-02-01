@@ -61,8 +61,11 @@
 			sizeSlide();
 			$(window).resize(function(){
 				if(SETTINGS.slideWidth == '100ps'){
-					slidesWidht = $(window).width();
-					container.add(slides).width(slidesWidht);
+					if($(window).width() > 1155){
+						slidesWidht = $(window).width();
+						container.add(slides).width(slidesWidht);
+						slidesContainer.css('marginLeft', (currentPage * (slidesWidht + SETTINGS.slideDistance) * SETTINGS.slideBy * -1));
+					}
 				}
 			});
 			hiddenSign();
@@ -72,7 +75,12 @@
 
 			function sizeSlide(){
 				if(slidesWidht == '100ps'){
-					slidesWidht = $(window).width();
+					if($(window).width() > 1155){
+						slidesWidht = $(window).width();
+					}
+					else {
+						slidesWidht = 1155;
+					}
 					container.add(slides).width(slidesWidht);
 				}
 				else container.add(slides).width(slidesWidht);
