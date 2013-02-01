@@ -158,6 +158,18 @@ SUB {
 
 /* =Layout
 --------------------------------------- */
+.l-culture {
+	background: url('../img/bg/culture.png') repeat #3F3F3F;
+}
+.l-nature {
+	background: url('../img/bg/nature.png') repeat #3F3F3F;
+}
+.l-sport {
+	background: url('../img/bg/sport.png') repeat #3F3F3F;
+}
+.l-water {
+	background: url('../img/bg/water.png') repeat #3F3F3F;
+}
 .l-page-index {
 	min-width: 1149px;
 }
@@ -535,7 +547,7 @@ SUB {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 699px;
+		width: 740px;
 		height: 273px;
 		background: url("../img/icons.png") no-repeat;
 		text-indent: -9999px;
@@ -723,6 +735,15 @@ SUB {
 		top: -16px;
 		left: -664px;
 	}
+.b-icon-tstar {
+	width: 36px;
+	height: 36px;
+	margin: -6px 0 0 -38px;
+}
+	.b-icon-tstar B {
+		top: -16px;
+		left: -702px;
+	}
 /* 48 */
 .b-icon-bicycle {
 	width: 48px;
@@ -763,6 +784,7 @@ SUB {
 		top: -51px;
 		left: -147px;
 	}
+
 
 /* 64 */
 .b-icon-video {
@@ -1605,6 +1627,15 @@ SUB {
 		margin: 0 0 15px 35px;
 	}
 
+/* The list with icons star */
+.b-themes-link-star {
+	padding-top: 6px;
+}
+	.b-themes-link-star .item {
+		margin-bottom: 19px;
+    	margin-right: 15px;
+	}
+
 /* The thematic links */
 .b-thematic-link {
 	font: 18px/18px 'Meta Pro Light',Arial,Helvetica,sans-serif;
@@ -1613,6 +1644,17 @@ SUB {
 	 .b-thematic-link:hover {
 	 	color: #0D4B7F !important;
 	 }
+.b-themes-link-star .b-thematic-link,
+.b-themes-link-star .b-thematic-link:visited {
+	color: #fff !important;
+}
+.b-themes-link-star .b-thematic-link:hover {
+	color: #fcd757 !important;
+}
+.b-themes-link-star .b-thematic-link {
+	font-size: 24px;
+	line-height: 24px;
+}
 
 /* The link leads to map */
 .b-object-link {
@@ -1907,6 +1949,13 @@ SUB {
 		width: 958px;
 		height: 316px;
 		}
+	.b-tiles .tile-3-1 {
+		width: 958px;
+		height: 316px;
+		}
+	.b-tiles-objects .tile-3-1 {
+		height: 259px;
+	}
 	.b-tiles .tile-top-left,
 	.b-tiles .tile-top-left .image {
 		-moz-border-top-left-radius: 5px;
@@ -2037,6 +2086,36 @@ SUB {
 	color: #FFF;
 	}
 	.b-blue-block .inner {
+		padding: 16px 24px;
+		}
+
+/* */
+.b-red-inwrought {
+	background: #c82d31 url('../img/inwrought/red-bg.png') no-repeat right bottom;
+	color: #fff;
+}
+	.b-red-inwrought .inner {
+		padding: 16px 24px;
+		}
+.b-green-inwrought {
+	background: #949d2c url('../img/inwrought/green-bg.png') no-repeat right bottom;
+	color: #fff;
+}
+	.b-green-inwrought .inner {
+		padding: 16px 24px;
+		}
+.b-purple-inwrought {
+	background: #8f118e url('../img/inwrought/purple-bg.png') no-repeat right bottom;
+	color: #fff;
+}
+	.b-purple-inwrought .inner {
+		padding: 16px 24px;
+		}
+.b-blue-inwrought {
+	background: #2359b4 url('../img/inwrought/blue-bg.png') no-repeat right bottom;
+	color: #fff;
+}
+	.b-blue-inwrought .inner {
 		padding: 16px 24px;
 		}
 
