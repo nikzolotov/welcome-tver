@@ -1259,7 +1259,7 @@ SUB {
 	}
 	.b-mark-link .text {
 		display: inline-block;
-		border-bottom: 1px solid;
+		text-decoration: underline;
 		}
 .b-mark-link:hover {
 	background: #4787BD;

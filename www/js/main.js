@@ -28,7 +28,7 @@ $(function(){
     if(tiles_height) $('.b-slideshow .slide').height(tiles_height-5);
 
 
-	$('.b-more').moreHistory();
+	//$('.b-more').moreHistory();
 
 
 	$(".b-contents .item .link").click(function(){
