@@ -283,6 +283,10 @@ SUB {
 	float: right;
 	width: 290px;
 }
+.l-column-292 {
+	float: left;
+	width: 292px;
+}
 .l-column-604 {
 	float: left;
 	width: 604px;
@@ -374,7 +378,8 @@ SUB {
 .b-filter:after,
 .b-text-intro:after,
 .b-appeal-detailed .title-image:after,
-.b-appeal-detailed .yellow-content:after {
+.b-appeal-detailed .yellow-content:after,
+.b-services-detail .hidden-content:after {
 	content: ".";
 	display: block;
 	height: 0;
@@ -445,6 +450,7 @@ SUB {
 		display: none;
 	}
 	.b-breadcrumbs .item {
+		position: relative;
 		display: inline-block;
 		margin: 0 30px 0 0;
 		vertical-align: top;
@@ -461,11 +467,13 @@ SUB {
 
 /* Purple arrow */
 .b-object-link {
+	margin: -14px 0 0;
 	display: inline-block;
 	text-decoration: none;
 	font: 18px/18px 'Meta Pro Light',Arial,Helvetica,sans-serif;
 	color: #fff !important;
 }
+
 	.b-object-link .text {
 		display: inline-block;
 		background: #7903aa;
@@ -473,8 +481,7 @@ SUB {
 		.b-object-link .arrow {
 			position: relative;
 			display: block;
-			height: 18px;
-			margin-right: -25px;
+			margin-right: -22px;
 			padding: 9px 25px 16px 7px;
 			background: url('../img/containers/breadcrumbs-arrow.png') no-repeat right 50%;
 		}
@@ -496,16 +503,39 @@ SUB {
 			.b-breadcrumbs .item-last .b-object-link .link {
 				padding-right: 26px;
 			}
+			.b-breadcrumbs .b-object-link .arrow {
+				height: 18px;
+			}
 			.b-breadcrumbs .item-last .b-object-link .down-arrow  {
 				right: 8px;
 			}
+.b-object-link-context {
+	margin: -10px 0 2px;
+}
+
+.b-object-link-map {
+	margin: 0;
+	font: 14px/17px Arial, Helvetica, sans-serif;
+	color: #4787BD !important;
+}
+	.b-object-link-map:hover {
+		color: #0D4B7F !important;
+	}
+	.b-object-link-map .text {
+		background: #e2dcc8
+	}
+	.b-object-link-map .arrow {
+		padding: 5px 8px 9px 50px;
+		background: url('../img/containers/map-arrow.png') no-repeat right 50%;
+	}
+
 			
 /*Sub menu for bread crumbs*/
 .b-sub-menu {
 	position: absolute;
 	z-index: 9999;
 	display: none;
-	width: 190px;
+	width: 100%;
 	background: #f7a51c;
 }
 	.b-sub-menu .menu {
@@ -515,6 +545,10 @@ SUB {
 			display: block;
 			margin: 0;
 			padding-top: 1px;
+		}
+		.b-sub-menu .menu .item:before {
+			content: none;
+			display: none;
 		}
 			.b-sub-menu .menu .item .link {
 				display: block;
@@ -528,6 +562,47 @@ SUB {
 				background: #7903AA;
 				color: #fff;
 			}
+/* The toggle block */
+.b-dehiscent {
+	position: absolute;
+	top: 26px;
+	right: 45px;
+}
+	.b-dehiscent .b-object-link {
+		margin: 0;
+		font-size: 28px;
+		line-height: 18px;
+		color: #000 !important;
+	}
+	.b-dehiscent .b-object-link:hover {
+		color: #432F55 !important;
+	}
+		.b-dehiscent .b-object-link .text {
+			background: #ffc60b;
+		}
+			.b-dehiscent .b-object-link .arrow {
+				height: 18px;
+				margin-right: -15px;
+				padding: 13px 19px 19px 16px;
+				background: url('../img/containers/dehiscent-arrow.png') no-repeat right 50%;
+			}
+			.b-dehiscent .b-object-link  .down-arrow {
+				background-position: -12px 0;
+			}
+				.b-dehiscent .b-object-link .link {
+					text-decoration: none;
+				}
+		.b-dehiscent .b-sub-menu {
+			display: none;
+			width: 100%;
+			font-size: 16px;
+			line-height: 19px;
+		}
+			.b-dehiscent .b-sub-menu .link {
+				padding: 5px 18px 7px !important;
+			}
+	
+
 /* Copyright */
 .b-copyright {
 	margin: 42px -24px 0 -24px;
@@ -824,6 +899,17 @@ SUB {
 	.b-icon-star2 B {
 		top: -51px;
 		left: -147px;
+	}
+.b-icon-average-index {
+	top: -10px;
+	left: -49px;
+	width: 48px;
+	height: 48px;
+	margin: 0;
+}
+	.b-icon-average-index B {
+		top: -51px;
+		left: -195px;
 	}
 
 
@@ -1356,7 +1442,33 @@ SUB {
 		.b-marked-link:hover .b-mark .arrow {
 			background-image: url('../img/containers/flag-text-arrow-hover.png');
 			}
-
+/* */
+.b-tabs-services-compact {
+	margin: 0 0 0 -8px;
+	padding: 12px 3px 0;
+	border-top: 1px solid #fff;
+}
+	.b-tabs-services-compact .item:before {
+		content: none;
+		display: none;
+	}
+	.b-tabs-services-compact .item {
+		display: inline-block;
+		margin: 0 18px 12px 0;
+	}
+		.b-tabs-services-compact .item .link {
+			padding: 1px 5px 4px;
+			font-size: 16px;
+			line-height: 19px;
+			color: #fff !important;
+			
+		}
+		.b-tabs-services-compact .item .link:hover {
+			color: #F4D9F9 !important;
+		}
+		.b-tabs-services-compact .item .selected {
+			background: #000;
+		}
 
 /* Simple text intro */
 .b-intro {
@@ -1701,13 +1813,7 @@ SUB {
 	line-height: 24px;
 }
 
-/* The link leads to map */
-.b-object-link {
-	margin: -14px 0 0;
-}
-.b-object-link-context {
-	margin: -10px 0 2px;
-}
+
 
 /* The collages in a history */
 .b-collage {
@@ -2134,6 +2240,26 @@ SUB {
 		padding: 16px 24px;
 		}
 
+/* Purple block */
+.b-purple-block {
+	position: relative;
+	margin: -28px -28px 20px;
+	padding: 20px 28px 10px;
+	background: #301633;
+	color: #FFF;
+
+	border-radius: 5px 5px 0 0;
+	-o-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-ms-border-radius: 5px 5px 0 0;
+}
+	.b-purple-block .title {
+		width: 461px;
+		font-size: 44px;
+    	line-height: 49px;
+	}
+
 /* */
 .b-red-inwrought {
 	background: #c82d31 url('../img/inwrought/red-bg.png') no-repeat right bottom;
@@ -2439,6 +2565,80 @@ SUB {
 		.b-context-to-do .b-themes-link .item {
 			display: block;
 		}
+
+/* The service detailed */
+.b-services-detail {
+	margin: 0;
+	padding-top: 15px;
+}
+	.b-services-detail .item-service:before {
+	    content: ">";
+	    position: absolute;
+	    margin-top: -1px;
+	    margin-left: -27px;
+	    font: 21px/22px 'times new roman', times;
+	    color: #000000;
+		}
+	.b-services-detail .item-service {
+		position: relative;
+		margin: 0 0 3px 25px;
+	}
+		.b-services-detail .item-service .close {
+			display: none;
+		}
+		.b-services-detail .item-service-selected .close {
+			position: absolute;
+			top: 3px;
+			right: 0;
+			display: block;
+			width: 19px;
+			height: 17px;
+			background: url('../img/i/close-mini.png') no-repeat 0 0;
+		}
+		.b-services-detail .list {
+			margin: 0 0 0 0;
+		}
+			.b-services-detail .list .item:before {
+				content: none;
+				display: none;
+			}
+			.b-services-detail .list .item {
+				display: inline-block;
+				margin-left: 0;
+				vertical-align: top;
+			}
+			.b-services-detail .list .item-316 {
+				width: 316px;
+			}
+			.b-services-detail .list .item-230 {
+				width: 230px;
+			}
+			.b-services-detail .list .item-160 {
+				width: 160px;
+			}
+			.b-services-detail .list .item-136 {
+				width: 136px;
+			}
+				.b-services-detail .list .link-active,
+				.b-services-detail .list .link-active:visited {
+					color: #000 !important;
+				}
+				.b-services-detail .list .link-active:hover {
+					color: #696969 !important;
+				}
+			.b-services-detail .hidden-content {
+				display: none;
+				margin-left: -24px;
+				padding-top: 24px;
+				border-top: 1px solid #000;
+				line-height: 16px;
+			}
+				.b-services-detail .hidden-content .image {
+					float: left;
+					margin: -4px 32px 0 0;
+				}
+
+
 
 
 /* Inwrought */
