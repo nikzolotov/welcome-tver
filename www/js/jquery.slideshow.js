@@ -219,12 +219,15 @@
 
 			function slideBallon(){
 				if(slides.eq(currentPage).hasClass(SETTINGS.balloon)) {
-					elementsOnIllustration.fadeIn(100);
-					elementBalloon.fadeIn(200);
+					/*Страница с шариком*/
+					elementsOnIllustration.fadeIn(100)
+					elementBalloon.show().animate({
+						bottom: 450+'px'
+					}, 8000);
 				}
 				else {
 					elementsOnIllustration.hide(100);
-					elementBalloon.hide(100);
+					elementBalloon.hide(100).stop().css('bottom', '-312px');
 				}
 			}
 		});

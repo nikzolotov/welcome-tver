@@ -2450,10 +2450,10 @@ SUB {
 /* Balloon */
 .b-ball {
 	position: absolute;
-	top: 300px;
+	bottom: -312px;
 	left: 50%;
-	display: none;
-	z-index: 9999;
+	display: block;
+	z-index: 99;
 	width: 168px;
 	height: 314px;
 	margin: 0 0 0 -84px;

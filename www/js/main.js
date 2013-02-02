@@ -59,12 +59,16 @@ $(function(){
 
 	//$('.b-more').moreHistory();
 
-
-	$(".b-contents .item .link").click(function(){
-		var selected = $(this).attr('href');	
-		$.scrollTo(selected, 500, {offset:-28 });		
-		return false;
-	});	
+/*Плавный скролл*/
+	$(".b-contents .item .link").click(function (event) { 
+	    elementClick = $(this).attr("href");
+	    destination = $(elementClick).offset().top - 20;
+	    if($.browser.safari || $.browser.chrome){
+	    	$('body').animate( { scrollTop: destination }, 1100 );
+	    } 
+	    else $('html').animate( { scrollTop: destination }, 1100 );
+	    event.preventDefault();
+    });
 
 	
 	$('.b-top-contents').scrollingСontents();
