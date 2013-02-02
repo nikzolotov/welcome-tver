@@ -2706,7 +2706,7 @@ SUB {
 	}
 
 /* The design contacts */
-.b-contacts-index {
+.b-ragged {
 	position: relative;
 	z-index: 999;
 	padding: 44px 140px 20px;
@@ -2714,8 +2714,8 @@ SUB {
 	background: #ffb400;
 	text-align: center;
 }
-	.b-contacts-index .top-border,
-	.b-contacts-index .bottom-border {
+	.b-ragged .top-border,
+	.b-ragged .bottom-border {
 		position: absolute;
 		left: 0;
 		display: block;
@@ -2723,51 +2723,69 @@ SUB {
 		height: 7px;
 		background: url('../img/containers/corner-border.png') repeat-x 0 0;
 	}
-	.b-contacts-index .top-border {
+	.b-ragged .top-border {
 		top: -7px;
 	}
-	.b-contacts-index .bottom-border {
+	.b-ragged .bottom-border {
 		bottom: -7px;
 		background-position: 0 -7px;
 	}
-	.b-contacts-index .title {
+	.b-ragged .title {
 		margin: 0 0 30px;
 		text-align: center;
 		font: 39px/42px 'Meta Pro Light', Arial, Helvetica, sans-serif;
 	}
-	.b-contacts-index .desc {
+	.b-ragged .desc {
 		margin: 0 0 10px;
 		font-size: 26px;
 		line-height: 28px;
 	}
-	.b-contacts-index .contacts {
+	.b-ragged .list,
+	.b-ragged .content {
 		margin-bottom: 0;
 		padding: 0 15px;
 		font: 19px/22px 'Meta Pro Light', Arial, Helvetica, sans-serif;
 	}
-		.b-contacts-index .contacts .item:before {
+		.b-ragged .list .item:before {
 			display: none;
 			content: none;
 		}
-		.b-contacts-index .contacts .item {
+		.b-ragged .list .item {
 			display: inline-block;
 		}
-		.b-contacts-index .contacts .link,
-		.b-contacts-index .contacts .link:visited {
+		.b-ragged .list .link,
+		.b-ragged .list .link:visited {
 			color: #000 !important;
 		}
-		.b-contacts-index .contacts .link:hover {
+		.b-ragged .list .link:hover {
 			color: #4D4C4C !important;
 		}
+.b-event-container {
+	margin-bottom: 200px;
+    padding-top: 100px;
+}
+	.b-event-container .b-ragged  {
+		padding: 44px 30px 20px;
+	}
+		.b-event-container .b-ragged .title {
+			margin-bottom: 50px;
+			font-size: 60px;
+			line-height: 64px;
+		}
+		.b-event-container .b-ragged .content {
+			padding-bottom: 20px;
+			font-size: 29px;
+			line-height: 36px;
+		}
 
-.b-contacts-index-top {
+.b-ragged-first {
 	border-radius: 7px 7px 0 0;
 	-o-border-radius: 7px 7px 0 0;
 	-moz-border-radius: 7px 7px 0 0;
 	-webkit-border-radius: 7px 7px 0 0;
 	-ms-border-radius: 7px 7px 0 0;
 }
-	.b-contacts-index-top .top-border {
+	.b-ragged-first .top-border {
 		display: none;
 	}
 
