@@ -14,17 +14,19 @@ $(function(){
 		moveSign = '-',
 		moveInterval;
 		function moveIllustration(){
+			valueMove = 0.5;
+			if(illustrations.hasClass('b-illustrations-noanimate')) valueMove = 0;
 			if( moveSign == '-' ){
 				if( illustrations.offset().left == (windowWidth - (illustrationWidth * illustrationsCount)) ){
 					moveSign = '+';
 				}
-				illustrations.css('left', illustrations.offset().left - windowScrollLeft - 0.5);
+				illustrations.css('left', illustrations.offset().left - windowScrollLeft - valueMove);
 			}
 			else{
 				if( illustrations.offset().left == 0 ){
 					moveSign = '-';
 				}
-				illustrations.css('left', illustrations.offset().left - windowScrollLeft + 0.5);
+				illustrations.css('left', illustrations.offset().left - windowScrollLeft + valueMove);
 			}
 		}
 		

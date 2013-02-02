@@ -190,7 +190,7 @@ $(function(){
 	$.fn.dropDownMenu = function(userOptions) {
 		var OPTIONS = {
             speed: 150,
-            hover_links: '.b-object-link',
+            hover_links: '.b-object-link .text',
             sub_menu: '.b-sub-menu'
         };
 
@@ -200,8 +200,9 @@ $(function(){
 		    }
 
 		    var containers = $(this),
+		    	hover_links = $(OPTIONS.hover_links, containers),
 		    	hidden_menu = $(OPTIONS.sub_menu, containers);
-
+		    hidden_menu.width(hover_links.width() - 14)
 		    toggleMenu();
 		    
 		    function toggleMenu(){
