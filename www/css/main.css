@@ -3446,7 +3446,7 @@ SUB {
 			.b-filter .b-square-button {
 				display: block;
 				}
-				.b-filter .link:hover .b-icon {
+				.b-filter .link:hover .b-icon2 {
 					opacity: .8;
 					}
 			.b-filter .selected .b-square-button {
@@ -4189,6 +4189,7 @@ SUB {
 .jspPane
 {
 	position: absolute;
+	z-index: 999;
 }
 
 .jspVerticalBar
