@@ -9,12 +9,10 @@
 		<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js"></script>
 		<script type="text/javascript" src="/js/jquery.jscrollpane.min.js"></script>
 		<script type="text/javascript" src="/js/jquery.tabs.js"></script>
-		<script type="text/javascript" src="/js/jquery.slideshow2.js"></script>
 		<script type="text/javascript" src="/js/jquery.hints.js"></script>
 		<script type="text/javascript" src="/js/modal.js"></script>
 		<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?load=package.full&mode=debug&lang=ru-RU"></script>
 		<script type="text/javascript" src="/js/history.js"></script>
-		<script type="text/javascript" src="/js/tabs.js"></script>
 		<script type="text/javascript" src="/js/map.js"></script>
 	</head>
 	<body>
@@ -60,12 +58,12 @@
 							</a>
 						</li>
 					</ul>
-					<label class="b-label">Культурное наследие</label>
+					<label class="b-label">Культурное&nbsp;наследие</label>
 					<ul class="b-filter">
 						<li class="item">
 							<a class="link js-type-link" href="?" rel="category-3">
 								<span class="b-square-button"><b class="b-icon2 b-icon2-religion-large"><b></b></b></span>
-								<span class="text">Монастыри </span>
+								<span class="text">Монастыри и&nbsp;церкви</span>
 							</a>
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-4">
@@ -75,7 +73,7 @@
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-5">
 								<span class="b-square-button"><b class="b-icon2 b-icon2-museum-large"><b></b></b></span>
-								<span class="text">Музеи</span>
+								<span class="text">Музеи и мастерклассы</span>
 							</a>
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-6">
@@ -95,7 +93,7 @@
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-9">
 								<span class="b-square-button"> </span>
-								<span class="text">Фестивали</span>
+								<span class="text">Фестивали и&nbsp;праздники</span>
 							</a>
 						</li>
 					</ul>
@@ -104,7 +102,7 @@
 						<li class="item">
 							<a class="link js-type-link" href="?" rel="category-10">
 								<span class="b-square-button"> </span>
-								<span class="text">Яхтинг</span>
+								<span class="text">Водные виды спорта</span>
 							</a>
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-11">
@@ -114,7 +112,7 @@
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-12">
 								<span class="b-square-button"><b class="b-icon2 b-icon2-water-large"><b></b></b></span>
-								<span class="text">Сплавы по рекам</span>
+								<span class="text">Сплавы по&nbsp;рекам</span>
 							</a>
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-13">
@@ -143,7 +141,7 @@
 						<li class="item">
 							<a class="link js-type-link" href="?" rel="category-15">
 								<span class="b-square-button"> </span>
-								<span class="text">Грибы и ягодя</span>
+								<span class="text">Грибы <br/>и&nbsp;ягоды</span>
 							</a>
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-16">
@@ -197,7 +195,7 @@
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-25">
 								<span class="b-square-button"> </span>
-								<span class="text">Лыжи и коньки</span>
+								<span class="text">Лыжи и&nbsp;коньки</span>
 							</a>
 						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-26">
@@ -205,14 +203,9 @@
 								<span class="text">Велотуризм</span>
 							</a>
 						</li><li class="item">
-							<a class="link js-type-link" href="?" rel="category-27">
-								<span class="b-square-button"> </span>
-								<span class="text">Пеший туризм</span>
-							</a>
-						</li><li class="item">
 							<a class="link js-type-link" href="?" rel="category-28">
 								<span class="b-square-button"> </span>
-								<span class="text">Горнолыжные парки</span>
+								<span class="text">Горнолыжные парки, тюбинг</span>
 							</a>
 						</li>
 					</ul>
@@ -223,7 +216,6 @@
 				</div>
 			</div>
 			<div id="point-links-panel" class="b-point-links-panel">
-				<!--
 				<ul class="b-tab-icons">
 					<li class="item search">
 						<a class="link" href="#search"><b class="b-icon2 b-icon2-search"><b>Поиск</b></b></a>
@@ -233,7 +225,6 @@
 						<a class="link selected" href="#point-links"><b class="b-icon2 b-icon2-rating-large"><b>Рейтинг</b></b></a>
 					</li>
 				</ul>
-				-->
 				<div id="search" class="tab tab-search">
 					<form id="search-form" class="b-search-form" method="get" action="?">
 						<fieldset>
@@ -248,84 +239,36 @@
 					</form>
 				</div>
 				<div id="route" class="tab tab-route">
-					<div class="tab-inner">
-						<h2 id="route-label" class="b-small-title">Построить маршрут</h2>
-						<div id="scrollPane" class="b-scroll-pane">
-							<div class="area">
-								<ul id="destinations" class="b-destinations">
-									<li class="item">
-										<div class="b-route-marker">А</div>
-										<form class="b-search-destination-form" action="?" method="get">
-											<fieldset>
-												<input class="b-opaque-input" type="text" name="query"/>
-												<span class="b-iconed-submit">
-													<b class="b-icon2 b-icon2-white-search"><b></b></b>
-													<input class="b-submit-overlay" type="submit" value="Найти"/>
-												</span>
-											</fieldset>
-										</form>
-										<i class="corner"></i>
-									</li></ul>
-								<a id="add-destination" class="b-add-link" href="?"><b class="b-icon2 b-icon2-add"><b>Добавить</b></b></a>
-							</div>
-							<div class="scrollbar">
-								<div class="mark">А</div>
-								<div class="inner"></div>
-								<div class="mark last-mark">Б</div>
-							</div>
+					<h2 id="route-label" class="b-small-title">Построить маршрут</h2>
+					<div id="scrollPane" class="b-scroll-pane">
+						<div class="area">
+							<ul id="destinations" class="b-destinations">
+								<li class="item">
+									<div class="b-route-marker">А</div>
+									<form class="b-search-destination-form" action="?" method="get">
+										<fieldset>
+											<input class="b-opaque-input" type="text" name="query"/>
+											<span class="b-iconed-submit">
+												<b class="b-icon2 b-icon2-white-search"><b></b></b>
+												<input class="b-submit-overlay" type="submit" value="Найти"/>
+											</span>
+										</fieldset>
+									</form>
+									<i class="corner"></i>
+								</li></ul>
+							<a id="add-destination" class="b-add-link" href="?"><b class="b-icon2 b-icon2-add"><b>Добавить</b></b></a>
+						</div>
+						<div class="scrollbar">
+							<div class="mark">А</div>
+							<div class="inner"></div>
+							<div class="mark last-mark">Б</div>
 						</div>
 					</div>
 				</div>
 				<div id="point-links" class="tab tab-points">
-					<div class="tab-inner">
-						<!--
-						<ul class="b-tab-links">
-							<li class="item">
-								<a class="link" href="#places">Места</a>
-							</li>
-							<li class="item">
-								<a class="link" href="#events">События</a>
-							</li>
-							<li class="item">
-								<a class="link" href="#service">Сервис</a>
-							</li>
-							<li class="item">
-								<a class="link selected" href="#best">Самое интересное</a>
-							</li>
+					<div id="points-scroll" class="scroll-pane">
+						<ul id="points-listing" class="b-point-links">
 						</ul>
-						<div id="places" class="b-slideshow2 b-slideshow2-points" style="display: none">
-							<div class="frame">
-								1
-							</div>
-							<a class="b-icon2 b-icon2-prev" href="?"><b>Предыдущие</b></a>
-							<a class="b-icon2 b-icon2-next" href="?"><b>Следующие</b></a>
-						</div>
-						<div id="events" class="b-slideshow2 b-slideshow2-points" style="display: none">
-							<div class="frame">
-								2
-							</div>
-							<a class="b-icon2 b-icon2-prev" href="?"><b>Предыдущие</b></a>
-							<a class="b-icon2 b-icon2-next" href="?"><b>Следующие</b></a>
-						</div>
-						<div id="service" class="b-slideshow2 b-slideshow2-points" style="display: none">
-							<div class="frame">
-								3
-							</div>
-							<a class="b-icon2 b-icon2-prev" href="?"><b>Предыдущие</b></a>
-							<a class="b-icon2 b-icon2-next" href="?"><b>Следующие</b></a>
-						</div>
-						-->
-						<div class="b-tab-links">
-							<div class="link selected">Показаны на карте</div>
-						</div>
-						<div id="best" class="b-slideshow2 b-slideshow2-points">
-							<div class="frame">
-								<ul id="points-listing" class="b-point-links slides">
-								</ul>
-							</div>
-							<a class="b-icon2 b-icon2-prev" href="?"><b>Предыдущие</b></a>
-							<a class="b-icon2 b-icon2-next" href="?"><b>Следующие</b></a>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -644,8 +587,8 @@
 					}
 				];
 				
-				var POI_ID = 10,
-					CATEGORIES_IDS = [3, 4];
+				//var POI_ID = 10,
+				//var CATEGORIES_IDS = [3, 4];
 			</script>
 		</div>
 		<div id="empty-search-results" class="b-modal-content">

@@ -3020,6 +3020,7 @@ SUB {
 .b-label {
 	display: block;
 	margin: 16px 0 10px 0;
+	text-align: center;
 	font-size: 11px;
 	line-height: 14px;
 	font-weight: bold;
@@ -3425,14 +3426,14 @@ SUB {
 
 /* Points filter */
 .b-filter {
-	width: 132px;
-	margin: -10px 0 0 -14px;
+	margin: -10px 0 0 -20px;
 	font-size: 11px;
 	line-height: 11px;
 	}
 	.b-filter .item {
 		display: inline-block;
-		margin: 10px 0 0 16px;
+		min-height: 75px;
+		margin: 10px 0 0 20px;
 		vertical-align: top;
 		}
 	.b-filter .item:before {
@@ -3454,8 +3455,8 @@ SUB {
 				}
 			.b-filter .text {
 				display: block;
-				width: 70px;
-				margin: 0 -10px;
+				width: 74px;
+				margin: 0 -12px;
 				padding-top: 3px;
 				text-align: center;
 				}
@@ -3463,7 +3464,7 @@ SUB {
 /* Tab icons */
 .b-tab-icons {
 	width: 105px;
-	margin: -47px 0 16px 0;
+	margin: -49px 0 16px 0;
 	}
 	.b-tab-icons .item {
 		display: inline-block;
@@ -3598,32 +3599,39 @@ SUB {
 
 /* Point links */
 .b-point-links {
-	height: 147px;
 	margin: 0 0 10px 0;
+	padding-left: 84px;
 	font-size: 12px;
 	line-height: 16px;
 	}
 	.b-point-links .item {
-		float: left;
-		width: 111px;
-		margin: 0 12px 0 0;
+		position: relative;
+		margin: 0 0 18px 0;
 		}
 	.b-point-links .item:before {
 		content: none;
 		display: none;
 		}
-		.b-point-links .link {
-			position: relative;
-			display: block;
-			text-decoration: none;
+		.b-point-links .title {
+			display: table-cell;
+			height: 68px;
+			vertical-align: middle;
+			margin: 0;
+			font: normal 12px/16px Arial, Helvetica, sans-serif;
 			color: #FFF;
 			}
-			.b-point-links .image-container {
-				position: relative;
-				margin-bottom: 5px;
+			.b-point-links .link {
+				border-bottom: 1px dotted;
+				text-decoration: none;
+				color: #FFF;
+				}
+			.b-point-links .link:hover {
+				border-bottom: 1px solid;
 				}
 				.b-point-links .image {
-					display: block;
+					position: absolute;
+					top: 0;
+					left: -84px;
 					
 					-moz-border-radius: 5px;
 					-webkit-border-radius: 5px;
@@ -3631,52 +3639,6 @@ SUB {
 					-ms-border-radius: 5px;
 					border-radius: 5px;
 					}
-			.b-point-links .type {
-				margin-bottom: 4px;
-				text-transform: uppercase;
-				font-size: 10px;
-				line-height: 12px;
-				}
-			.b-point-links .title {
-				margin: 0 -6px 0 0;
-				font: normal 12px/16px Arial, Helvetica, sans-serif;
-				color: #FFF;
-				}
-				.b-point-links .title .text {
-					border-bottom: 1px dotted;
-					}
-				.b-point-links .link:hover .title .text {
-					border-style: solid;
-					}
-.b-point-links-index {
-	height: 200px;
-	font-size: 14px;
-	line-height: 18px;
-	}
-	.b-point-links-index .item {
-		width: 140px;
-		margin-right: 20px;
-		}
-		.b-point-links-index .link {
-			color: #000;
-			}
-			.b-point-links-index .image-container {
-				margin-bottom: 8px;
-				}
-				.b-point-links-index .image {
-					width: 140px;
-					height: 140px;
-					}
-			.b-point-links-index .type {
-				margin-top: 12px;
-				letter-spacing: 1px;
-				color: #777;
-				}
-			.b-point-links-index .title {
-				color: #333;
-				font-size: 14px;
-				line-height: 18px;
-				}
 
 /* Route points */
 .b-destinations {
@@ -3839,7 +3801,7 @@ SUB {
 .b-zoom {
 	width: 36px;
 	}
-	.b-zoom .b-icon {
+	.b-zoom .b-icon2 {
 		display: block;
 		margin-bottom: 4px;
 		cursor: pointer;
@@ -4056,8 +4018,8 @@ SUB {
 .b-filter-panel {
 	position: absolute;
 	top: 79px;
-	right: 23px;
-	padding: 16px;
+	left: 23px;
+	padding: 20px;
 	background: rgba(0, 0, 0, .8);
 	color: #FFF;
 	
@@ -4068,115 +4030,50 @@ SUB {
 	border-radius: 7px;
 	}
 	.b-filter-panel .scroll-pane {
-		width: 129px;
-		height: 372px;
-		margin: 0 -9px 16px 0;
+		width: 120px;
+		height: 582px;
+		margin: 0 -20px 16px -20px;
+		padding: 0 20px;
 		overflow: hidden;
 		}
+		
 
 /* Rich panel with search, best points, route */
 .b-point-links-panel {
 	position: absolute;
-	bottom: 0;
-	left: 61px;
-	padding: 16px 14px;
+	top: 79px;
+	right: 23px;
+	padding: 18px;
 	background: rgba(0, 0, 0, .8);
 	color: #FFF;
 	
-	-moz-border-radius: 7px 7px 0 0;
-	-webkit-border-radius: 7px 7px 0 0;
-	-o-border-radius: 7px 7px 0 0;
-	-ms-border-radius: 7px 7px 0 0;
-	border-radius: 7px 7px 0 0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-o-border-radius: 7px;
+	-ms-border-radius: 7px;
+	border-radius: 7px;
 	}
 	.b-point-links-panel .tab-search {
 		display: none;
-		width: 499px;
-		height: 54px;
+		width: 215px;
+		height: 282px;
 		}
 	.b-point-links-panel .tab-route {
 		display: none;
-		width: 615px;
-		height: 88px;
+		width: 215px;
+		height: 282px;
 		}
-		.b-point-links-panel .tab-inner {
-			padding: 0 2px;
-			}
-			.b-point-links-panel .b-small-title {
-				padding-left: 4px;
-				}
 	.b-point-links-panel .tab-points {
-		width: 615px;
-		height: 182px;
+		width: 215px;
+		height: 582px;
 		}
-		.b-point-links-panel .tab-inner {
-			padding: 0 6px;
+		.b-point-links-panel .tab-points .scroll-pane {
+			width: 100%;
+			height: 100%;
+			margin-right: -18px;
+			padding-right: 18px;
+			overflow: hidden;
 			}
-
-/* Slideshow functionality */
-.b-slideshow2  {
-	position: relative;
-	}
-	.b-slideshow2 .frame {
-		width: 530px;
-		margin: -1px -38px;
-		padding: 1px 38px;
-		overflow: hidden;
-		}
-		.b-slideshow2 .slides {
-			width: 9999px;
-			}
-			.b-slideshow2 .slide {
-				float: left;
-				width: 530px;
-				height: 410px;
-				margin-right: 58px;
-				overflow: hidden;
-				/* To do: hidden ставить скриптом */
-				}
-		.b-slideshow2 .b-icon2-prev {
-			position: absolute;
-			top: 145px;
-			left: -82px;
-			}
-		.b-slideshow2 .b-icon2-next {
-			position: absolute;
-			top: 145px;
-			right: -82px;
-			}
-		.b-slideshow2 .hidden {
-			display: none;
-			}
-		.b-slideshow2 .dots {
-			margin: 18px 0 -18px 0;
-			text-align: center;
-			}
-.b-slideshow2-points .frame {
-	width: 603px;
-	margin: -1px;
-	padding: 1px;
-	}
-	.b-slideshow2-points .b-icon2-prev {
-		top: 38px;
-		left: -59px;
-		}
-	.b-slideshow2-points .b-icon2-next {
-		top: 38px;
-		right: -59px;
-		}
-.b-slideshow2-index-points .frame {
-	width: 780px;
-	margin: -1px;
-	padding: 1px;
-	}
-	.b-slideshow2-index-points .b-icon2-prev {
-		top: 48px;
-		left: -59px;
-		}
-	.b-slideshow2-index-points .b-icon2-next {
-		top: 48px;
-		right: -59px;
-		}
 
 /* Temp */
 
@@ -4196,7 +4093,8 @@ SUB {
 {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 7px;
+	z-index: 1000;
 	width: 4px;
 	height: 100%;
 }
@@ -4235,11 +4133,12 @@ SUB {
 
 .jspDrag
 {
-	background: #777;
 	position: relative;
 	top: 0;
 	left: 0;
 	cursor: pointer;
+	background: #777;
+	background: rgba(255, 255, 255, .25);
 	
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -4250,6 +4149,7 @@ SUB {
 
 .jspContainer:hover .jspDrag {
 	background: #CCC;
+	background: rgba(255, 255, 255, .75);
 	}
 
 .jspHorizontalBar .jspTrack,
