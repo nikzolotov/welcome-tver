@@ -3,7 +3,7 @@
 }
 
 .flags {
-	display: none;
+	display: block;
 	font: normal 12px/14px Tahoma;
 }
 .flags li {

@@ -2452,6 +2452,7 @@ SUB {
 	position: absolute;
 	bottom: -312px;
 	left: 50%;
+	overflow: visible !important;
 	display: block;
 	z-index: 99;
 	width: 168px;
@@ -3091,6 +3092,7 @@ SUB {
 /* Button */
 .b-button {
 	position: relative;
+	display: none;
 	height: 30px;
 	margin-right: 5px;
 	background: url('../img/inputs.png') 0 -62px;
@@ -3122,6 +3124,7 @@ SUB {
 
 /* Square button */
 .b-square-button {
+	position: relative;
 	display: inline-block;
 	width: 48px;
 	height: 48px;
@@ -3183,7 +3186,7 @@ SUB {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 588px;
+		width: 2528px;
 		height: 230px;
 		background: url("../img/icons-demo.png") no-repeat;
 		text-indent: -9999px;
@@ -3356,6 +3359,248 @@ SUB {
 		left: -259px;
 		}
 
+
+.b-icon2-monastery {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-monastery B {
+		top: -79px;
+		left: -296px;
+		}
+.b-icon2-estate {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-estate B {
+		top: -76px;
+		left: -333px;
+		}
+.b-icon2-museums {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-museums B {
+		top: -77px;
+		left: -370px;
+		}
+.b-icon2-heritage {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-heritage B {
+		top: -77px;
+		left: -407px;
+		}
+.b-icon2-movie {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-movie B {
+		top: -76px;
+		left: -443px;
+		}
+.b-icon2-kitchen {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-kitchen B {
+		top: -76px;
+		left: -481px;
+		}
+.b-icon2-festival {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-festival B {
+		top: -76px;
+		left: -519px;
+		}
+.b-icon2-yachting {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-yachting B {
+		top: -76px;
+		left: -555px;
+		}
+.b-icon2-cruise {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-cruise B {
+		top: -79px;
+		left: -592px;
+		}
+.b-icon2-rafting {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-rafting B {
+		top: -76px;
+		left: -629px;
+		}
+.b-icon2-fishing {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-fishing B {
+		top: -78px;
+		left: -665px;
+		}
+.b-icon2-wind {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-wind B {
+		top: -76px;
+		left: -700px;
+		}
+.b-icon2-diving {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-diving B {
+		top: -74px;
+		left: -740px;
+		}
+.b-icon2-beach {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-beach B {
+		top: -76px;
+		left: -777px;
+		}
+.b-icon2-mushrooms {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-mushrooms B {
+		top: -76px;
+		left: -814px;
+		}
+.b-icon2-forest {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-forest B {
+		top: -76px;
+		left: -851px;
+		}
+.b-icon2-animals {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-animals B {
+		top: -76px;
+		left: -888px;
+		}
+.b-icon2-snowmobile {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-snowmobile B {
+		top: -79px;
+		left: -925px;
+		}
+.b-icon2-dogs {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-dogs B {
+		top: -75px;
+		left: -962px;
+		}
+.b-icon2-cave {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-cave B {
+		top: -80px;
+		left: -997px;
+		}
+.b-icon2-off-road {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-off-road B {
+		top: -77px;
+		left: -1035px;
+		}
+.b-icon2-parachute {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-parachute B {
+		top: -77px;
+		left: -1073px;
+		}
+.b-icon2-golf {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-golf B {
+		top: -77px;
+		left: -1110px;
+		}
+.b-icon2-tennis {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-tennis B {
+		top: -77px;
+		left: -1146px;
+		}
+.b-icon2-skates {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-skates B {
+		top: -77px;
+		left: -1184px;
+		}
+.b-icon2-cycling {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-cycling B {
+		top: -79px;
+		left: -1220px;
+		}
+.b-icon2-ski-park {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-ski-park B {
+		top: -77px;
+		left: -1259px;
+		}
+.b-icon2-farm {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-farm B {
+		top: -78px;
+		left: -1295px;
+		}
+.b-icon2-zoo {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-zoo B {
+		top: -76px;
+		left: -1334px;
+		}
+.b-icon2-business {
+	width: 36px;
+	height: 36px;
+	}
+	.b-icon2-business B {
+		top: -76px;
+		left: -1368px;
+		}
+
 /* 48 types */
 .b-icon2-city-large {
 	width: 48px;
@@ -3420,6 +3665,255 @@ SUB {
 		top: -116px;
 		left: -343px;
 		}
+.b-icon2-monastery-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-monastery-large B {
+		top: -116px;
+		left: -390px;
+		}
+.b-icon2-estate-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-estate-large B {
+		top: -116px;
+		left: -441px;
+		}
+.b-icon2-museums-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-museums-large B {
+		top: -116px;
+		left: -490px;
+		}
+.b-icon2-heritage-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-heritage-large B {
+		top: -116px;
+		left: -539px;
+		}
+.b-icon2-movie-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-movie-large B {
+		top: -116px;
+		left: -587px;
+		}
+.b-icon2-kitchen-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-kitchen-large B {
+		top: -116px;
+		left: -636px;
+		}
+.b-icon2-festival-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-festival-large B {
+		top: -116px;
+		left: -685px;
+		}
+.b-icon2-yachting-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-yachting-large B {
+		top: -113px;
+		left: -734px;
+		}
+.b-icon2-cruise-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-cruise-large B {
+		top: -116px;
+		left: -783px;
+		}
+.b-icon2-rafting-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-rafting-large B {
+		top: -116px;
+		left: -831px;
+		}
+.b-icon2-fishing-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-fishing-large B {
+		top: -115px;
+		left: -882px;
+		}
+.b-icon2-wind-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-wind-large B {
+		top: -116px;
+		left: -930px;
+		}
+.b-icon2-diving-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-diving-large B {
+		top: -116px;
+		left: -980px;
+		}
+.b-icon2-beach-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-beach-large B {
+		top: -116px;
+		left: -1029px;
+		}
+.b-icon2-mushrooms-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-mushrooms-large B {
+		top: -116px;
+		left: -1078px;
+		}
+.b-icon2-forest-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-forest-large B {
+		top: -116px;
+		left: -1127px;
+		}
+.b-icon2-animals-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-animals-large B {
+		top: -116px;
+		left: -1177px;
+		}
+.b-icon2-snowmobile-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-snowmobile-large B {
+		top: -116px;
+		left: -1225px;
+		}
+.b-icon2-dogs-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-dogs-large B {
+		top: -116px;
+		left: -1274px;
+		}
+.b-icon2-cave-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-cave-large B {
+		top: -115px;
+		left: -1323px;
+		}
+.b-icon2-off-road-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-off-road-large B {
+		top: -114px;
+		left: -1371px;
+		}
+.b-icon2-parachute-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-parachute-large B {
+		top: -116px;
+		left: -1420px;
+		}
+.b-icon2-golf-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-golf-large B {
+		top: -116px;
+		left: -1469px;
+		}
+.b-icon2-tennis-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-tennis-large B {
+		top: -116px;
+		left: -1518px;
+		}
+.b-icon2-skates-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-skates-large B {
+		top: -115px;
+		left: -1568px;
+		}
+.b-icon2-cycling-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-cycling-large B {
+		top: -114px;
+		left: -1617px;
+		}
+.b-icon2-ski-park-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-ski-park-large B {
+		top: -116px;
+		left: -1666px;
+		}
+.b-icon2-farm-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-farm-large B {
+		top: -114px;
+		left: -1715px;
+		}
+.b-icon2-zoo-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-zoo-large B {
+		top: -116px;
+		left: -1764px;
+		}
+.b-icon2-business-large {
+	width: 48px;
+	height: 48px;
+	}
+	.b-icon2-business-large B {
+		top: -116px;
+		left: -1813px;
+		}
+
+
+
+
+
+
+
+
+
 
 /* -------- */
 
@@ -3440,13 +3934,14 @@ SUB {
 		display: none;
 		}
 		.b-filter .link {
+			position: relative;
 			text-decoration: none;
 			color: #FFF;
 			}
 			.b-filter .b-square-button {
 				display: block;
 				}
-				.b-filter .link:hover .b-icon {
+				.b-filter .link:hover .b-icon2 {
 					opacity: .8;
 					}
 			.b-filter .selected .b-square-button {
@@ -3459,7 +3954,9 @@ SUB {
 				padding-top: 3px;
 				text-align: center;
 				}
-
+.b-filter-object {
+	position: relative;
+}
 /* Tab icons */
 .b-tab-icons {
 	width: 105px;
@@ -3555,6 +4052,7 @@ SUB {
 	position: absolute;
 	top: -1px;
 	left: 0;
+	display: none;
 	width: 100%;
 	text-align: center;
 	}

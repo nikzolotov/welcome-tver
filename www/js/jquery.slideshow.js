@@ -219,8 +219,17 @@
 
 			function slideBallon(){
 				if(slides.eq(currentPage).hasClass(SETTINGS.balloon)) {
-					/*Страница с шариком*/
-					elementsOnIllustration.fadeIn(100)
+					/*Слайд с шариком*/
+					i = 0;
+					elementsOnIllustration.each(function(index,element){
+						console.log(i)
+						setTimeout(function(){	
+							$(element).fadeIn(100)
+						}, i);
+						i += 200;
+					});
+
+					//elementsOnIllustration.fadeIn(100)
 					elementBalloon.show().animate({
 						bottom: 450+'px'
 					}, 8000);
