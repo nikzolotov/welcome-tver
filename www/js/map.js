@@ -170,7 +170,7 @@
 
 	// Зум
 	var zoomControl = new ymaps.control.SmallZoomControl({layout: zoomLayout});
-	map.controls.add(zoomControl, {left: 21, top: 92});
+	map.controls.add(zoomControl, {left: 200, top: 92});
 	
 	// Большие точки городов
 	var cities = [],
@@ -225,12 +225,12 @@
 		pointsListing = $('#points-listing'),
 		pointTemplate =
 			'<li class="item" rel="{type}">' +
-				'<a rel="point-{id}" href="?" class="link">' +
-					'<div class="image-container">' +
-						'<img alt="{title}" src="img/points/{id}/point.jpg" class="image"/>' +
-					'</div>' +
-					'<h3 class="title"><span class="text">{title}</span></h3>' +
-				'</a>' +
+				'<h3 class="title">' +
+					'<a class="link" rel="point-{id}" href="?">' +
+						'<img class="image" alt="{title}" src="/img/points/{id}/point.jpg" width="74" height="74"/> ' +
+						'<span class="text">{title}</span>' +
+					'</a>' +
+				'</h3>' +
 			'</li>',
 		pointsString = '';
 	
@@ -329,13 +329,19 @@
 	});
 	
 	$('#filter-scroll').jScrollPane({
-		mouseWheelSpeed: 20
+		mouseWheelSpeed: 50,
+		verticalGutter: -4
 	});
 	
 	// Выбор редакции
+	var pointsScroll = $('#points-scroll'),
+		pointsScrollObject;
+	
 	function showPointsInListing( _rel ){
 		$('.item[rel=' + _rel + ']', pointsListing).show();
 		$('#point-links-panel').show();
+		
+		pointsScrollObject.reinitialise();
 	}
 	
 	function hidePointsInListing( _rel ){
@@ -344,6 +350,8 @@
 		if( $('.item:visible', pointsListing).length == 0 ){
 			$('#point-links-panel').hide();
 		}
+		
+		pointsScrollObject.reinitialise();
 	}
 	
 	$('.link', pointsListing).live('click', function(event){
@@ -393,15 +401,6 @@
 		map.balloon.close();
 	});
 	
-	$('.b-slideshow2').slideShow2({
-		slideSelector: '.b-point-links .item',
-		slideBy: 5,
-		slidePerPage: 5,
-		slideWidth: 111,
-		slideDistance: 12
-	});
-	
-	/*
 	$('#point-links-panel').tabs({
 		linkSelector: '.b-tab-icons .link',
 		tabSelector: '.tab',
@@ -411,11 +410,12 @@
 		}
 	});
 	
-	$('#point-links').tabs({
-		linkSelector: '.b-tab-links .link',
-		tabSelector: '.b-slideshow2'
+	pointsScroll.jScrollPane({
+		mouseWheelSpeed: 50,
+		verticalGutter: -4
 	});
-	*/
+	
+	pointsScrollObject = pointsScroll.data('jsp');
 	
 	// Маршруты
 	function addPointToRoute( _rel ){
@@ -788,7 +788,7 @@
 	}
 	
 	// Категории, переданные в url
-	typeLinks.click();
+	//typeLinks.click();
 	
 	if( typeof CATEGORIES_IDS !== 'undefined' ){
 		typeLinks.filter(function(){
